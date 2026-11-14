@@ -1,0 +1,10 @@
+name = "arcaus-api"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# The evidence bundle (data/build/evidence_bundle.json) is imported by src/index.js
+# and bundled at deploy time. Rebuild it with `python -m ember.build` before deploying.
+# No bindings are required: no KV, R2, D1 or AI.
+# Ask ARCAUS (/api/v1/ask) needs ONE encrypted secret, set in Cloudflare, never in this file:
+#   npx wrangler secret put GEMINI_API_KEY      (or Dashboard > arcaus-api > Settings > Variables and Secrets)
+# Optional plain variable: GEMINI_MODEL (default gemini-2.5-flash).

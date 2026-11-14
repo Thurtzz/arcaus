@@ -1,0 +1,186 @@
+[
+ {
+  "id": "CMP-01",
+  "topic": "airflow",
+  "title": "Airflow and flame behavior",
+  "question": "Does ventilation flow speed change flame spread and extinction across microgravity experiments?",
+  "finding_ids": [
+   "F-B1-01",
+   "F-B2-04",
+   "F-B2-02",
+   "F-L18-01",
+   "F-S1-01",
+   "F-S5-04",
+   "F-GEL-01"
+  ],
+  "agreement": "Every solid-fuel experiment saw flow change flame behavior. BASS and BASS-II found the strongest sensitivity below about 5 cm/s, with quenching at a few cm/s. Saffire I and III saw concurrent spread rise with flow at spacecraft scale. SoFIE-GEL saw extinction at both low and high flow.",
+  "differences": "Spread rates differ with duct size: Saffire's large duct gave slower concurrent spread than small-duct work. Within BASS-II thick PMMA, the flow effect cannot be isolated because flow and oxygen changed together. Saffire-V adds that small upstream disturbances can speed spread.",
+  "independent_experiment_count": 3,
+  "independence_note": "BASS, BASS-II and Link et al. count as one lineage. Saffire is a separate experiment by an overlapping team. SoFIE-GEL is a separate investigation.",
+  "numeric_merge_allowed": false,
+  "numeric_merge_reason": "Different ducts (7.6 cm, 30-46 cm, CIR chamber), sample geometries, flow definitions and atmospheres.",
+  "implications": [
+   "Flow is a primary research variable for spacecraft fire behavior.",
+   "No universal flow-to-spread curve is supported."
+  ],
+  "limitations": [
+   "Saffire values are author-reported, not verified against data here."
+  ],
+  "studies": [
+   "BASS",
+   "BASS-II",
+   "SAFFIRE-I-III",
+   "SAFFIRE-IV-V",
+   "SOFIE-GEL"
+  ],
+  "lineage_groups": [
+   "BASS",
+   "Saffire",
+   "SoFIE"
+  ]
+ },
+ {
+  "id": "CMP-02",
+  "topic": "oxygen",
+  "title": "Oxygen concentration and flammability",
+  "question": "How does ambient oxygen change flammability and extinction in microgravity?",
+  "finding_ids": [
+   "F-B2-06",
+   "F-B2-09",
+   "F-B2-04",
+   "F-B2-05",
+   "F-L18-01",
+   "F-OF15-01",
+   "F-S45-01",
+   "F-GEL-01"
+  ],
+  "agreement": "Within BASS-II, two materials and two flow directions agree: lower oxygen narrows the flammable flow range, and PMMA rods stayed flammable at lower oxygen than the normal-gravity upward limit (13.5 vs 15.4 vol%). Four of the five SoFIE-GEL extinction cases fell between 13.5 and 15% O2; the fifth was a quench at 20.77% O2 and 0.44 cm/s.",
+  "differences": "Saffire V tested a single elevated-oxygen, reduced-pressure atmosphere, not an oxygen sweep. SoFIE-GEL used spheres in a different apparatus, so its oxygen values are not on the BASS-II boundary.",
+  "independent_experiment_count": 3,
+  "independence_note": "The oxygen-sweep evidence is effectively one campaign (BASS-II, with Link et al. and Olson and Ferkul as further papers on it). Saffire V and SoFIE-GEL add context, not replication of the sweep.",
+  "numeric_merge_allowed": false,
+  "numeric_merge_reason": "Different geometry (rod, film, fabric, sphere), pressure and flow definition.",
+  "implications": [
+   "Study oxygen jointly with flow and material.",
+   "Never state a universal safe oxygen level."
+  ],
+  "limitations": [
+   "Oxygen measured only at test start and end in BASS-II."
+  ],
+  "studies": [
+   "BASS-II",
+   "SAFFIRE-IV-V",
+   "SOFIE-GEL"
+  ],
+  "lineage_groups": [
+   "BASS",
+   "Saffire",
+   "SoFIE"
+  ]
+ },
+ {
+  "id": "CMP-03",
+  "topic": "geometry",
+  "title": "Material geometry and flame propagation",
+  "question": "How do fuel thickness, width and surface structure affect flame spread?",
+  "finding_ids": [
+   "F-B2-01",
+   "F-B2-03",
+   "F-S1-01",
+   "F-S5-01",
+   "F-S5-02",
+   "F-S45-03"
+  ],
+  "agreement": "Geometry changed spread in both BASS-II and Saffire: thicker PMMA sheets spread more slowly (BASS-II), narrower ribs sped up opposed spread (Saffire V), and sample and duct size changed spread (Saffire I-III).",
+  "differences": "BASS-II varied thickness on small flat sheets at about 1 atm and 16.8-22.2% O2; Saffire V varied rib width on one large structured sample at about 72-76 kPa and 25.7-26.9% O2. They are not matched thickness experiments.",
+  "independent_experiment_count": 2,
+  "independence_note": "BASS-II and Saffire are separate experiments by an overlapping NASA Glenn team.",
+  "numeric_merge_allowed": false,
+  "numeric_merge_reason": "No common geometry variable, atmosphere or duct; Saffire-V gives no numeric spread rates.",
+  "implications": [
+   "Flat-sample tests may not represent structured parts.",
+   "Report geometry with every spread rate."
+  ],
+  "limitations": [
+   "BASS-II thickness trend is descriptive; Saffire-V rib result has no numbers."
+  ],
+  "studies": [
+   "BASS-II",
+   "SAFFIRE-I-III",
+   "SAFFIRE-IV-V"
+  ],
+  "lineage_groups": [
+   "BASS",
+   "Saffire"
+  ]
+ },
+ {
+  "id": "CMP-04",
+  "topic": "extinction_mechanism",
+  "title": "Quenching versus blowoff",
+  "question": "Are low-flow quenching and high-flow blowoff different extinction mechanisms?",
+  "finding_ids": [
+   "F-B2-08",
+   "F-B2-04",
+   "F-B2-09",
+   "F-OF15-01",
+   "F-GEL-01"
+  ],
+  "agreement": "BASS-II (rods, fabric, film) and SoFIE-GEL (spheres) describe the same two modes: quenching at low flow, where heat loss wins and the flame shrinks and oscillates; blowoff at high flow, where a hole opens at the stagnation region. SoFIE-GEL adds a smooth transition case where the modes meet.",
+  "differences": "Pulsation details differ by geometry (tip pulsation in quenching, base pulsation in blowoff on spheres). BASS-II fabric has only one blowoff case.",
+  "independent_experiment_count": 2,
+  "independence_note": "The best-replicated claim here: BASS-II and SoFIE-GEL are separate investigations.",
+  "numeric_merge_allowed": false,
+  "numeric_merge_reason": "Extinction flows depend on geometry and stretch; sphere and rod/fabric values cannot share one axis.",
+  "implications": [
+   "Treat 'went out' as two outcomes with different causes and different safety meaning."
+  ],
+  "limitations": [
+   "Few extinction cases in each study; no fitted boundary for fabric."
+  ],
+  "studies": [
+   "BASS-II",
+   "SOFIE-GEL"
+  ],
+  "lineage_groups": [
+   "BASS",
+   "SoFIE"
+  ]
+ },
+ {
+  "id": "CMP-05",
+  "topic": "ventilation_change",
+  "title": "Changing or stopping ventilation",
+  "question": "Where did reducing or stopping ventilation produce different outcomes?",
+  "finding_ids": [
+   "F-B2-11",
+   "F-B1-01",
+   "F-S45-01",
+   "F-S45-02",
+   "F-S5-04",
+   "F-S5-05"
+  ],
+  "agreement": "Both BASS lineage and Saffire show flames respond quickly to flow changes, and that weak flames can persist at very low flow.",
+  "differences": "In BASS-II, in ISS-like air at about 1 atm, flames always went out when the fan was turned off. In Saffire V, at 70.7-72.6 kPa and 25.4-26.2% O2, flames survived reduced and stopped flow, and one reignited after 6.4 s of local extinction. NASA proposes that a small residual flow may sometimes extinguish better than none. Saffire-V authors also raise a backdraft hazard from disturbing a stratified fire (untested).",
+  "independent_experiment_count": 2,
+  "independence_note": "BASS lineage and Saffire are separate experiments by an overlapping team.",
+  "numeric_merge_allowed": false,
+  "numeric_merge_reason": "Different atmosphere, pressure, scale and sample size.",
+  "implications": [
+   "The ISS fan-off practice is supported for ISS air but should not be assumed for exploration atmospheres.",
+   "Ventilation strategy is an open research question, not a guideline."
+  ],
+  "limitations": [
+   "Saffire V observations are few and author-reported from video."
+  ],
+  "studies": [
+   "BASS",
+   "BASS-II",
+   "SAFFIRE-IV-V"
+  ],
+  "lineage_groups": [
+   "BASS",
+   "Saffire"
+  ]
+ }
+]

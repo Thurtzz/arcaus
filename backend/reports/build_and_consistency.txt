@@ -1,0 +1,53 @@
+[PASS] DATA-01    PSI-25 has 129 unique tests
+[PASS] DATA-02    Every Table 5.1 test exists in PSI-25
+[PASS] DATA-03    Table 5.1 initial and final O2 equal PSI-25 values
+[PASS] DATA-04    Table 7.1 O2 within 0.05 vol% of PSI-25 initial O2
+[PASS] DATA-05    Table 7.1 tests are SIBAL fabric in PSI-25
+[PASS] DATA-06    All Table 5.1 tests are opposed flow in Appendix A
+[PASS] DATA-07    All Table 7.1 tests are concurrent flow in Appendix A
+[PASS] DATA-08    Flow configuration unresolved only for O1, O2, O20, O21, O22
+[PASS] UNIT-01    PMMA spread rates in (0, 1) mm/s
+[PASS] UNIT-02    Opposed flow velocities in (0, 60] cm/s
+[PASS] UNIT-03    O2 values within 10-25 vol%
+[PASS] UNIT-04    PMMA thickness in 1-5 mm, width 1.2 or 2.2 cm
+[PASS] UNIT-05    Final O2 never exceeds initial O2 in Table 5.1
+[PASS] UNIT-06    Quench final flow lies below start flow
+[PASS] REP-01     Per-test aggregates recomputed from steps match the validation notebook
+[PASS] REP-02     39 tracked steps from 18 independent tests
+[PASS] REP-03     Steps are labelled repeated, tests independent
+[PASS] SCI-01     F-B2-01 test-level rho reproduces from data
+[PASS] SCI-02     F-B2-02 spread fell at every step in all multi-step tests (13 of 13; flow down in 12)
+[PASS] SCI-03     F-B2-04 fabric outcome counts 6/1/6/14 reproduce
+[PASS] SCI-04     F-B2-05 lowest fresh-sample sustained-flame O2 is 16.9 vol%; no ignition at 16.4, 16.4, 16.8
+[PASS] SCI-05     F-B2-10 O2:CO2 slopes reproduce near PMMA stoichiometry (1.2)
+[PASS] SCI-06     F-OF15-01 Olson rod count reconciles: 27 tests minus 3 run in Feb 2016 equals 24
+[PASS] SCI-07     F-B2-01 per-test median spread at 1 mm and 5 mm reproduces
+[PASS] EVD-01     Every finding has a valid evidence type
+[PASS] EVD-02     Verified measurements come only from verified BASS-II datasets
+[PASS] EVD-03     No verified measurement rests on an abstract-only source
+[PASS] EVD-04     Every finding names a known study
+[PASS] EVD-05     Every source reference resolves and has a page, table, figure or slide locator
+[PASS] EVD-06     Every BASS-II test identifier in a finding exists in PSI-25
+[PASS] EVD-07     Finding topics come from the controlled list
+[PASS] EVD-08     Every reported value carries a unit
+[PASS] EVD-09     Every finding states at least one limitation
+[PASS] EVD-10     Every study has a valid independence level
+[PASS] EVD-11     The unsourced 0.88 mm/s Saffire-V value appears in no finding
+[PASS] CMP-01-A   CMP-01 references only known findings
+[PASS] CMP-01-B   CMP-01 independent experiment count equals distinct lineages (3)
+[PASS] CMP-01-C   CMP-01 forbids numeric merging
+[PASS] CMP-02-A   CMP-02 references only known findings
+[PASS] CMP-02-B   CMP-02 independent experiment count equals distinct lineages (3)
+[PASS] CMP-02-C   CMP-02 forbids numeric merging
+[PASS] CMP-03-A   CMP-03 references only known findings
+[PASS] CMP-03-B   CMP-03 independent experiment count equals distinct lineages (2)
+[PASS] CMP-03-C   CMP-03 forbids numeric merging
+[PASS] CMP-04-A   CMP-04 references only known findings
+[PASS] CMP-04-B   CMP-04 independent experiment count equals distinct lineages (2)
+[PASS] CMP-04-C   CMP-04 forbids numeric merging
+[PASS] CMP-05-A   CMP-05 references only known findings
+[PASS] CMP-05-B   CMP-05 independent experiment count equals distinct lineages (2)
+[PASS] CMP-05-C   CMP-05 forbids numeric merging
+[PASS] GAP-01     Data gaps reference known findings
+
+51 passed, 0 failed; {'studies': 7, 'sources': 16, 'findings': 31, 'comparisons': 5, 'gaps': 10, 'bass2_tests': 129, 'bass2_pmma_steps': 41, 'bass2_pmma_tests': 18, 'bass2_fabric_outcomes': 27, 'search_docs': 43}

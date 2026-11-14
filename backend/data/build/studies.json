@@ -1,0 +1,237 @@
+[
+ {
+  "id": "BASS-II",
+  "name": "Burning and Suppression of Solids-II",
+  "psi_id": "PSI-25",
+  "platform": "ISS Microgravity Science Glovebox, BASS flow duct (7.6 cm square)",
+  "years": "2014",
+  "lineage_group": "BASS",
+  "team_group": "NASA-GRC-solids",
+  "independence_from_bass2": "same_experiment",
+  "materials": [
+   "PMMA rods",
+   "PMMA films, sheets and slabs",
+   "PMMA spherical section",
+   "SIBAL cotton-fiberglass fabric",
+   "Nomex III",
+   "wax candle"
+  ],
+  "variables": [
+   "ambient O2 13.6-22.2 vol% (PSI-25)",
+   "forced flow 0-55 cm/s",
+   "opposed, concurrent and stagnation flow",
+   "fuel thickness and geometry"
+  ],
+  "summary": "Small flow-duct burns of solid fuels in microgravity with oxygen lowered by nitrogen dilution. Measured flame spread, extinction by quenching and blowoff, and combustion products. The only investigation here with verified test-level data in this service.",
+  "data_in_service": true,
+  "source_ids": [
+   "SRC-TM-2021-0011385",
+   "SRC-PSI-25",
+   "SRC-VALIDATION-2026",
+   "SRC-LINK-2018",
+   "SRC-OLSON-FERKUL-2015",
+   "SRC-ICES-2015-196",
+   "SRC-OLSON-2019",
+   "SRC-ZHAO-2015"
+  ],
+  "finding_ids": [
+   "F-B2-01",
+   "F-B2-02",
+   "F-B2-03",
+   "F-B2-04",
+   "F-B2-05",
+   "F-B2-06",
+   "F-B2-07",
+   "F-B2-08",
+   "F-B2-09",
+   "F-B2-10",
+   "F-B2-11",
+   "F-B2-12",
+   "F-L18-01",
+   "F-OF15-01",
+   "F-OF15-02"
+  ]
+ },
+ {
+  "id": "BASS",
+  "name": "Burning and Suppression of Solids",
+  "psi_id": "PSI-26",
+  "platform": "ISS Microgravity Science Glovebox, BASS flow duct",
+  "years": "2012",
+  "lineage_group": "BASS",
+  "team_group": "NASA-GRC-solids",
+  "independence_from_bass2": "same_lineage",
+  "materials": [
+   "thin and thick flat samples",
+   "PMMA spheres",
+   "candles",
+   "Ultem 1000",
+   "Nomex HT90-40",
+   "Nomex III",
+   "SIBAL fabric"
+  ],
+  "variables": [
+   "O2 17-21.5 vol%",
+   "forced flow up to 40 cm/s",
+   "opposed and concurrent flow"
+  ],
+  "summary": "Predecessor to BASS-II on the same hardware: 115 burns on 41 samples. Established strong flame sensitivity to flow below 5 cm/s and long-lived dim flames below 1 cm/s.",
+  "data_in_service": false,
+  "source_ids": [
+   "SRC-FERKUL-2013",
+   "SRC-ZHAO-2015"
+  ],
+  "finding_ids": [
+   "F-B1-01",
+   "F-B1-02"
+  ]
+ },
+ {
+  "id": "SAFFIRE-I-III",
+  "name": "Spacecraft Fire Safety Experiment I-III",
+  "psi_id": "PSI-98, PSI-99, PSI-100",
+  "platform": "Uncrewed Cygnus vehicle, Saffire flow unit (46 cm duct)",
+  "years": "2016-2017",
+  "lineage_group": "Saffire",
+  "team_group": "NASA-GRC-solids",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "materials": [
+   "SIBAL cotton-fiberglass 94 x 40.6 cm (I, III)",
+   "silicone, SIBAL, Nomex, PMMA 5 cm wide (II)"
+  ],
+  "variables": [
+   "forced flow 20-25 cm/s",
+   "concurrent and opposed flow",
+   "ISS-like air"
+  ],
+  "summary": "First large-scale fires set inside a spacecraft. Measured spread over a fabric sheet an order of magnitude larger than earlier microgravity samples, and material flammability (II).",
+  "data_in_service": false,
+  "source_ids": [
+   "SRC-URBAN-2017",
+   "SRC-URBAN-2018"
+  ],
+  "finding_ids": [
+   "F-S1-01",
+   "F-S2-01"
+  ]
+ },
+ {
+  "id": "SAFFIRE-IV-V",
+  "name": "Spacecraft Fire Safety Experiment IV and V",
+  "psi_id": null,
+  "platform": "Uncrewed Cygnus vehicle (NG-13, NG-14), Saffire flow unit (30 cm duct for IV)",
+  "years": "2020-2021",
+  "lineage_group": "Saffire",
+  "team_group": "NASA-GRC-solids",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "materials": [
+   "SIBAL fabric",
+   "cotton jersey",
+   "1- and 2-sided PMMA",
+   "structured (ribbed) PMMA"
+  ],
+  "variables": [
+   "IV: 100 kPa, 22.0 mol% O2",
+   "V: 70.7-72.6 kPa, 25.4-26.2 mol% O2 (as executed)",
+   "forced flow 20 cm/s, reduced and stopped in some tests"
+  ],
+  "summary": "Large-scale fires on thick fuels and in exploration-like atmospheres, with vehicle impact, extinguishment by reducing or stopping flow, and surface-structure effects.",
+  "data_in_service": false,
+  "source_ids": [
+   "SRC-URBAN-2021",
+   "SRC-EIGENBROD-2021"
+  ],
+  "finding_ids": [
+   "F-S45-01",
+   "F-S45-02",
+   "F-S45-03",
+   "F-S5-01",
+   "F-S5-02",
+   "F-S5-03",
+   "F-S5-04",
+   "F-S5-05",
+   "F-S5-06"
+  ]
+ },
+ {
+  "id": "SOFIE-GEL",
+  "name": "Solid Fuel Ignition and Extinction - Growth and Extinction Limit",
+  "psi_id": null,
+  "platform": "ISS Combustion Integrated Rack",
+  "years": "2023",
+  "lineage_group": "SoFIE",
+  "team_group": "NASA-GRC-solids",
+  "independence_from_bass2": "separate_investigation",
+  "materials": [
+   "4 cm diameter PMMA spheres"
+  ],
+  "variables": [
+   "forced flow 0.2-80 cm/s",
+   "O2 13-28% at about 1 atm (manuscript)"
+  ],
+  "summary": "Extinction limits of thick PMMA spheres in a different apparatus from BASS-II. Five extinction cases detail quenching, blowoff and the transition between them.",
+  "data_in_service": false,
+  "source_ids": [
+   "SRC-GEL-2024"
+  ],
+  "finding_ids": [
+   "F-GEL-01"
+  ]
+ },
+ {
+  "id": "FLEX",
+  "name": "Flame Extinguishment Experiment",
+  "psi_id": "PSI-69",
+  "platform": "ISS Combustion Integrated Rack, Multi-User Droplet Combustion Apparatus",
+  "years": "2009-2011 (reported)",
+  "lineage_group": "FLEX",
+  "team_group": "NASA-GRC-droplets",
+  "independence_from_bass2": "separate_investigation",
+  "materials": [
+   "methanol droplets",
+   "n-heptane droplets"
+  ],
+  "variables": [
+   "0.70-3.05 atm",
+   "O2 with N2, CO2 and He dilution",
+   "droplet diameter 2-5 mm"
+  ],
+  "summary": "Droplet combustion and extinction under inert-gas dilution. The report catalogues results without interpreting them. Liquid fuels, so not comparable with solid-fuel spread.",
+  "data_in_service": false,
+  "source_ids": [
+   "SRC-FLEX-TP-2015"
+  ],
+  "finding_ids": [
+   "F-FLEX-01"
+  ]
+ },
+ {
+  "id": "SAME-R",
+  "name": "Smoke Aerosol Measurement Experiment - Reflight",
+  "psi_id": "PSI-101",
+  "platform": "ISS",
+  "years": "2010",
+  "lineage_group": "SAME",
+  "team_group": "NASA-GRC-smoke",
+  "independence_from_bass2": "separate_investigation",
+  "materials": [
+   "Teflon",
+   "Kapton",
+   "cotton",
+   "silicone rubber",
+   "Pyrell"
+  ],
+  "variables": [
+   "sample heating below ignition",
+   "inlet flow 0-8.1 cm/s"
+  ],
+  "summary": "Smoke particle size from overheated, non-flaming spacecraft materials, for fire detector design. No flames.",
+  "data_in_service": false,
+  "source_ids": [
+   "SRC-SAMER-2012"
+  ],
+  "finding_ids": [
+   "F-SAMER-01"
+  ]
+ }
+]

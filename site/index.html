@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#160914"/>
+  <meta name="description" content="ARCAUS — Fire Beyond Gravity. An independent TERNARY NASA Space Apps 2026 research observatory exploring verified microgravity combustion findings."/>
+  <title>ARCAUS | Fire Beyond Gravity — NASA Space Apps 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/svg+xml" href="./assets/arcaus-mark.svg"/>
+  <link rel="stylesheet" href="./style.css"/>
+  <script src="./config.js"></script>
+  <script src="./app.js" defer></script>
+  <script src="./enhancements.js" defer></script>
+</head>
+<body>
+  <div class="cosmic-noise" aria-hidden="true"></div>
+  <a class="skip-link" href="#findings">Skip to scientific findings</a>
+  <header class="topbar shell">
+    <a class="identity" href="#top" aria-label="ARCAUS — return home"><span class="identity-rule"></span><span class="brand">ARCAUS</span></a>
+    <span class="brand-descriptor">A TERNARY PROJECT <span>·</span> NASA SPACE APPS 2026</span>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="#experiments">Experiments</a><a href="#findings">Findings</a><a href="#data">Data</a><a href="#resources">Resources</a><a href="#method">About</a>
+    </nav>
+    <a class="nav-discover" href="#experiments" aria-label="Go to research search">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.4"/><path d="m15.5 15.5 5 5"/></svg>
+    </a>
+    <a class="nav-orb" href="#findings" aria-label="Open evidence findings"><span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+  <main id="top">
+    <section class="home-stage shell" aria-label="ARCAUS observatory home">
+      <div class="hero-grid">
+        <article class="hero-message exhibit-glass">
+          <div class="eyebrow hero-eyebrow"><span class="amber-dot"></span> RESEARCH OBSERVATORY</div>
+          <h1>Fire Beyond<br/>Gravity.</h1>
+          <p class="hero-subtitle">A unified scientific platform for microgravity flame research across NASA experiments.</p>
+          <div id="heroReadouts" class="hero-readouts" aria-label="Verified BASS-II study data"><span class="loading-text">Loading NASA research…</span></div>
+          <a class="primary" href="#experiments">Explore Experiments <span aria-hidden="true">⟶</span></a>
+          <a class="secondary" href="#findings">View Findings <span aria-hidden="true">↗</span></a>
+        </article>
+        <div class="flame-visual" role="img" aria-label="Illustrative artwork of a colorful orb-like flame; not NASA imagery or a numerical simulation">
+          <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="flame-halo" aria-hidden="true"></div><img src="./assets/reference-flame.png" alt=""/>
+          <span class="reticle tl" aria-hidden="true"></span><span class="reticle tr" aria-hidden="true"></span><span class="reticle bl" aria-hidden="true"></span><span class="reticle br" aria-hidden="true"></span>
+          <span class="crosshair top" aria-hidden="true">+</span><span class="crosshair left" aria-hidden="true">+</span><span class="crosshair right" aria-hidden="true">+</span><span class="crosshair bottom" aria-hidden="true">+</span>
+          <div class="illustrative-label">ILLUSTRATIVE ARTWORK <span>·</span><br/>NOT NASA IMAGERY OR<br/> SIMULATION <i></i></div>
+        </div>
+        <aside class="hero-evidence exhibit-glass" aria-label="Featured NASA investigations">
+          <div class="hero-evidence-title"><span class="sliders-symbol">☷</span><h2>Evidence Highlights</h2></div>
+          <div id="featuredStudies" class="featured-list"><span class="loading-text">Loading study records…</span></div>
+        </aside>
+      </div>
+      <div class="small-metrics">
+        <article class="panel panel-signals">
+          <header><span class="panel-symbol waves">⌁</span><div><h2>Cross-Study Evidence</h2><p>Key findings and relationships across<br/> independent NASA investigations.</p></div></header>
+          <div id="signalChart" class="signals"><span class="loading-text">Loading evidence…</span></div>
+        </article>
+        <article class="panel panel-metrics">
+          <header><span class="panel-symbol">▥</span><div><h2>Verified BASS-II Metrics</h2></div></header>
+          <div id="verifiedMetrics" class="metric-values"><span class="loading-text">Loading metrics…</span></div>
+        </article>
+        <article class="panel panel-mini">
+          <header><span class="panel-symbol">☷</span><div><h2>PMMA SPREAD vs THICKNESS</h2></div></header>
+          <div id="miniChart" class="mini-plot"><span class="loading-text">Loading chart…</span></div>
+          <div class="mini-source"><a href="https://ntrs.nasa.gov/citations/20210011385" target="_blank" rel="noopener noreferrer">NASA/TM-20210011385 · TABLE 5.1 ↗</a></div>
+        </article>
+      </div>
+      <div class="wordmark-footer">
+        <div class="huge-wordmark" aria-hidden="true">ARCAUS</div>
+        <div class="horizon" aria-hidden="true"></div>
+        <div class="showcase-credits">
+          <div class="integrity-badge"><strong id="scienceStatus">LOADING EVIDENCE…</strong><span id="footerBundleStatus">VERIFYING DATA</span><span id="heroChecks" class="visually-hidden">Checking source bundle</span></div>
+          <div class="credits-copy"><strong>CREATED BY TIFFANY HURTADO</strong><span>Independent TERNARY project for NASA Space Apps 2026 ·<br/>Not an official NASA service</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="transition-rule shell" aria-hidden="true"><span>SCROLL TO EXPLORE THE EVIDENCE</span><span>✣</span></div>
+
+    <section class="research-section shell" id="findings">
+      <div class="section-intro"><div class="section-kicker"><span>01</span> / CROSS-STUDY INTELLIGENCE</div><h2>What survives <em>comparison?</em></h2><p>Five evidence-led questions across NASA investigations. We show where observations align—and where the experiment, conditions, and conclusions diverge.</p></div>
+      <div class="research-layout">
+        <aside class="panel selection-panel"><h3 class="rail-label">RESEARCH QUESTIONS <span class="index-count">05</span></h3><div id="comparisonList" class="comparison-list"></div><div class="source-hint">Each comparison preserves experimental independence and published limitations.</div></aside>
+        <article id="comparisonDetail" class="panel comparison-detail" aria-live="polite"><p>Select a research question to inspect NASA-sourced evidence.</p></article>
+      </div>
+    </section>
+
+    <section class="research-section shell" id="data">
+      <div class="section-intro"><div class="section-kicker"><span>02</span> / MEASURED DATA</div><h2>Inside the <em>experiment.</em></h2><p>Real BASS-II records, not decorative simulation. Explore how measured PMMA spread varied across material thickness and how fabric test outcomes were classified.</p></div>
+      <div class="chart-grid">
+        <article class="panel chart-panel"><div class="chart-title"><div><div class="overline">BASS-II · TABLE 5.1</div><h3>PMMA thickness & flame spread</h3><p>18 independent test-run means · mm/s</p></div><span class="tag">VERIFIED MEASUREMENTS</span></div><div id="testChart" class="plot"></div><div id="testDetail" class="data-notice">Select a glowing data point to inspect its test conditions.</div></article>
+        <article class="panel chart-panel"><div class="chart-title"><div><div class="overline">BASS-II · TABLE 7.1</div><h3>Fabric ignition & extinction</h3><p>27 test records · outcome categories</p></div><span class="tag">OBSERVED OUTCOMES</span></div><div id="fabricSummary" class="fabric-bars"></div><p class="caveat">Eight test records involved previously burned specimens. Classifications must be read in the context of the NASA test notes.</p></article>
+      </div>
+      <div class="section-footnote">The plotted measurements are descriptive observations under selected experimental conditions, not predictive safety thresholds or a universal model.</div>
+    </section>
+
+    <section class="research-section shell" id="experiments">
+      <div class="section-intro"><div class="section-kicker"><span>03</span> / INVESTIGATION ARCHIVE</div><h2>Explore the <em>experiments.</em></h2><p>Trace each discovery back to an investigation, its materials and test conditions, and the original NASA research record.</p></div>
+      <div class="explorer-grid">
+        <aside class="panel selection-panel"><label class="rail-label" for="researchSearch">SEARCH VERIFIED EVIDENCE</label><div class="search-control"><input id="researchSearch" placeholder="Try ‘quenching’ or ‘ventilation’" maxlength="200" autocomplete="off"/><button id="researchSearchButton" aria-label="Search scientific evidence" type="button">⌕</button></div><div id="searchStatus" class="source-hint" role="status">Search source-backed records</div><div id="searchResults" class="search-results" aria-live="polite"></div><h3 class="rail-label index-label">NASA INVESTIGATIONS</h3><div id="studyList" class="study-list"></div></aside>
+        <article id="studyDetail" class="panel study-detail" aria-live="polite"><p>Select an investigation to read its findings.</p></article>
+      </div>
+      <section class="ask-arc panel" id="askArcaus" hidden aria-label="Ask ARCAUS Gemini assistant"><div class="ask-heading"><div class="overline">OPTIONAL · SOURCE-GROUNDED RESEARCH ASSISTANT</div><h3>Ask <em>ARCAUS.</em></h3><p>Questions are answered against retrieved NASA evidence, with explicit citations and uncertainty. This feature appears only if your backend is connected.</p></div><div class="ask-control"><label for="askQuestion" class="visually-hidden">Your research question</label><input id="askQuestion" maxlength="300" placeholder="Why did ventilation changes affect flames?"/><button id="askButton" type="button">Ask ARCAUS ⟶</button></div><div id="askStatus" class="source-hint" role="status" aria-live="polite">Requires live grounded Gemini API.</div><div id="askResult" class="ask-result" aria-live="polite"></div></section>
+    </section>
+
+    <section class="research-section shell" id="resources">
+      <div class="section-intro"><div class="section-kicker"><span>04</span> / SOURCE LEDGER</div><h2>Follow the <em>evidence.</em></h2><p>The papers, records, and original NASA research sources behind ARCAUS. Every source link opens the original resource.</p></div><div id="sourceLibrary" class="source-library panel" aria-live="polite"><p>Loading original research sources…</p></div>
+    </section>
+
+    <section class="research-section shell" id="method">
+      <div class="section-intro"><div class="section-kicker"><span>05</span> / TRANSPARENCY</div><h2>Evidence first.<br/><em>Claims in context.</em></h2><p>ARCAUS is an independent research observatory, not a certified spacecraft-fire safety model. Where the source record leaves uncertainty, we keep it visible.</p></div><div class="method-grid"><article class="panel method-panel"><div class="overline">THE RESEARCH METHOD</div><h3>How we interpret the evidence</h3><ol><li>Inspect NASA experiments and publication records.</li><li>Preserve test-level measurements and their conditions.</li><li>Separate independent tests from repeated steps and publications.</li><li>Compare conclusions without pooling incompatible numerical data.</li></ol></article><article class="panel method-panel"><div class="overline">KNOWN LIMITATIONS</div><h3>Open evidence gaps</h3><div id="gapList"></div></article></div><p id="integrityStatus" class="integrity">Reading source-bundle integrity status…</p>
+      <div class="openspace-strip panel"><div><div class="overline">OPTIONAL EXTERNAL EXPERIENCE</div><h3>Journey through the universe with <em>OpenSpace.</em></h3><p>OpenSpace is a separate open-source visualization platform. ARCAUS does not embed it or use it to simulate the NASA flame studies.</p></div><a href="https://www.openspaceproject.com/" target="_blank" rel="noopener noreferrer" class="outline-action">Explore OpenSpace ↗</a></div>
+    </section>
+  </main>
+  <footer class="site-footer shell"><a href="#top" class="footer-mark">ARCAUS</a><span>FIRE BEYOND GRAVITY · TERNARY · 2026</span><span>CREATED BY TIFFANY HURTADO</span><a href="https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/" target="_blank" rel="noopener noreferrer">SPACE APPS CHALLENGE ↗</a></footer>
+  <script>
+    (function(){const b=document.querySelector('.menu-toggle'),n=document.querySelector('.primary-nav');if(b&&n){b.addEventListener('click',()=>{const on=n.classList.toggle('menu-open');b.setAttribute('aria-expanded',String(on));});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('menu-open');b.setAttribute('aria-expanded','false');}));}})();
+  </script>
+</body>
+</html>

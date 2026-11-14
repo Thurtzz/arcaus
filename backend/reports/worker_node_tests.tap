@@ -1,0 +1,526 @@
+TAP version 13
+# Subtest: golden cases loaded (79)
+ok 1 - golden cases loaded (79)
+  ---
+  duration_ms: 1.301836
+  type: 'test'
+  ...
+# Subtest: GET /
+ok 2 - GET /
+  ---
+  duration_ms: 1.19282
+  type: 'test'
+  ...
+# Subtest: GET /api/v1
+ok 3 - GET /api/v1
+  ---
+  duration_ms: 0.177982
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/
+ok 4 - GET /api/v1/
+  ---
+  duration_ms: 0.180903
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/health
+ok 5 - GET /api/v1/health
+  ---
+  duration_ms: 0.239143
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/meta
+ok 6 - GET /api/v1/meta
+  ---
+  duration_ms: 0.18332
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/consistency
+ok 7 - GET /api/v1/consistency
+  ---
+  duration_ms: 0.4723
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/consistency?status=fail
+ok 8 - GET /api/v1/consistency?status=fail
+  ---
+  duration_ms: 0.350965
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/studies
+ok 9 - GET /api/v1/studies
+  ---
+  duration_ms: 2.086321
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/studies?independence=separate_investigation
+ok 10 - GET /api/v1/studies?independence=separate_investigation
+  ---
+  duration_ms: 0.54057
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/studies/BASS-II
+ok 11 - GET /api/v1/studies/BASS-II
+  ---
+  duration_ms: 0.496214
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/studies/SOFIE-GEL
+ok 12 - GET /api/v1/studies/SOFIE-GEL
+  ---
+  duration_ms: 0.128191
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/sources
+ok 13 - GET /api/v1/sources
+  ---
+  duration_ms: 0.179419
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/sources?access=abstract_only
+ok 14 - GET /api/v1/sources?access=abstract_only
+  ---
+  duration_ms: 0.108834
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/sources/SRC-EIGENBROD-2021
+ok 15 - GET /api/v1/sources/SRC-EIGENBROD-2021
+  ---
+  duration_ms: 0.193264
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings
+ok 16 - GET /api/v1/findings
+  ---
+  duration_ms: 0.770694
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings?topic=ventilation_change
+ok 17 - GET /api/v1/findings?topic=ventilation_change
+  ---
+  duration_ms: 0.258532
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings?evidence_type=hypothesis
+ok 18 - GET /api/v1/findings?evidence_type=hypothesis
+  ---
+  duration_ms: 0.145915
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings?study=SAFFIRE-IV-V&topic=geometry
+ok 19 - GET /api/v1/findings?study=SAFFIRE-IV-V&topic=geometry
+  ---
+  duration_ms: 0.177158
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings?independence=same_experiment&lineage=BASS
+ok 20 - GET /api/v1/findings?independence=same_experiment&lineage=BASS
+  ---
+  duration_ms: 0.357212
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings?test_id=T18
+ok 21 - GET /api/v1/findings?test_id=T18
+  ---
+  duration_ms: 0.155275
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings/F-B2-01
+ok 22 - GET /api/v1/findings/F-B2-01
+  ---
+  duration_ms: 0.280375
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings/F-S5-05
+ok 23 - GET /api/v1/findings/F-S5-05
+  ---
+  duration_ms: 0.129353
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings/F-GEL-01
+ok 24 - GET /api/v1/findings/F-GEL-01
+  ---
+  duration_ms: 0.113677
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/comparisons
+ok 25 - GET /api/v1/comparisons
+  ---
+  duration_ms: 0.14391
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/comparisons?topic=oxygen
+ok 26 - GET /api/v1/comparisons?topic=oxygen
+  ---
+  duration_ms: 0.14043
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/comparisons/CMP-01
+ok 27 - GET /api/v1/comparisons/CMP-01
+  ---
+  duration_ms: 0.220505
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/comparisons/CMP-05
+ok 28 - GET /api/v1/comparisons/CMP-05
+  ---
+  duration_ms: 0.135857
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/gaps
+ok 29 - GET /api/v1/gaps
+  ---
+  duration_ms: 0.303707
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/gaps?status=open&priority=high
+ok 30 - GET /api/v1/gaps?status=open&priority=high
+  ---
+  duration_ms: 0.154397
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/gaps?study=SAFFIRE-IV-V
+ok 31 - GET /api/v1/gaps?study=SAFFIRE-IV-V
+  ---
+  duration_ms: 0.102908
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=oxygen+quenching+fabric
+ok 32 - GET /api/v1/search?q=oxygen+quenching+fabric
+  ---
+  duration_ms: 0.886945
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=How%20does%20airflow%20affect%20flame%20spread%3F&limit=20
+ok 33 - GET /api/v1/search?q=How%20does%20airflow%20affect%20flame%20spread%3F&limit=20
+  ---
+  duration_ms: 0.336405
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=ribbed+acrylic+backdraft&type=finding
+ok 34 - GET /api/v1/search?q=ribbed+acrylic+backdraft&type=finding
+  ---
+  duration_ms: 0.199492
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=flame+spread&evidence_type=hypothesis
+ok 35 - GET /api/v1/search?q=flame+spread&evidence_type=hypothesis
+  ---
+  duration_ms: 0.215895
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=flame&study=BASS-II&type=finding&limit=50
+ok 36 - GET /api/v1/search?q=flame&study=BASS-II&type=finding&limit=50
+  ---
+  duration_ms: 0.211772
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=smoke+detector
+ok 37 - GET /api/v1/search?q=smoke+detector
+  ---
+  duration_ms: 0.115
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=13.5+oxygen
+ok 38 - GET /api/v1/search?q=13.5+oxygen
+  ---
+  duration_ms: 0.351492
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=Plexiglas+flames+extinguished
+ok 39 - GET /api/v1/search?q=Plexiglas+flames+extinguished
+  ---
+  duration_ms: 0.316644
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=comparison+ventilation&type=comparison
+ok 40 - GET /api/v1/search?q=comparison+ventilation&type=comparison
+  ---
+  duration_ms: 0.228134
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/rank/investigations?q=ventilation+shutdown+extinction
+ok 41 - GET /api/v1/rank/investigations?q=ventilation+shutdown+extinction
+  ---
+  duration_ms: 0.741372
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/rank/investigations?q=droplet+inert+gas&limit=3
+ok 42 - GET /api/v1/rank/investigations?q=droplet+inert+gas&limit=3
+  ---
+  duration_ms: 0.197896
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/rank/investigations?q=thick+pmma+thickness+spread+rate
+ok 43 - GET /api/v1/rank/investigations?q=thick+pmma+thickness+spread+rate
+  ---
+  duration_ms: 0.221847
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/rank/investigations?q=quenching+blowoff+mechanism
+ok 44 - GET /api/v1/rank/investigations?q=quenching+blowoff+mechanism
+  ---
+  duration_ms: 0.152585
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/summary
+ok 45 - GET /api/v1/bass2/summary
+  ---
+  duration_ms: 0.13777
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/tests
+ok 46 - GET /api/v1/bass2/tests
+  ---
+  duration_ms: 2.550821
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/tests?flow_configuration=unresolved
+ok 47 - GET /api/v1/bass2/tests?flow_configuration=unresolved
+  ---
+  duration_ms: 0.214852
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/tests?fuel_family=SIBAL%20fabric&flag=o2_final_implausible
+ok 48 - GET /api/v1/bass2/tests?fuel_family=SIBAL%20fabric&flag=o2_final_implausible
+  ---
+  duration_ms: 0.150282
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/tests?pi=Olson&flow_configuration=Stagnation
+ok 49 - GET /api/v1/bass2/tests?pi=Olson&flow_configuration=Stagnation
+  ---
+  duration_ms: 0.667718
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/tests/M8
+ok 50 - GET /api/v1/bass2/tests/M8
+  ---
+  duration_ms: 0.311802
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/tests/T18
+ok 51 - GET /api/v1/bass2/tests/T18
+  ---
+  duration_ms: 0.195713
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/tests/O20
+ok 52 - GET /api/v1/bass2/tests/O20
+  ---
+  duration_ms: 0.093929
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/pmma/steps
+ok 53 - GET /api/v1/bass2/pmma/steps
+  ---
+  duration_ms: 0.34431
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/pmma/steps?test_id=M3
+ok 54 - GET /api/v1/bass2/pmma/steps?test_id=M3
+  ---
+  duration_ms: 0.084968
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/pmma/steps?tracked=false
+ok 55 - GET /api/v1/bass2/pmma/steps?tracked=false
+  ---
+  duration_ms: 0.072691
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/pmma/steps?thickness_mm=4&width_cm=2.2
+ok 56 - GET /api/v1/bass2/pmma/steps?thickness_mm=4&width_cm=2.2
+  ---
+  duration_ms: 0.316304
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/pmma/tests
+ok 57 - GET /api/v1/bass2/pmma/tests
+  ---
+  duration_ms: 1.283876
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/pmma/tests?sides_burning=1
+ok 58 - GET /api/v1/bass2/pmma/tests?sides_burning=1
+  ---
+  duration_ms: 0.189958
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/fabric/outcomes
+ok 59 - GET /api/v1/bass2/fabric/outcomes
+  ---
+  duration_ms: 0.444544
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/fabric/outcomes?sample_reused=false&width_cm=2.2
+ok 60 - GET /api/v1/bass2/fabric/outcomes?sample_reused=false&width_cm=2.2
+  ---
+  duration_ms: 0.220909
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/fabric/outcomes?outcome_class=no%20ignition
+ok 61 - GET /api/v1/bass2/fabric/outcomes?outcome_class=no%20ignition
+  ---
+  duration_ms: 0.139736
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings?colour=red
+ok 62 - GET /api/v1/findings?colour=red
+  ---
+  duration_ms: 0.185578
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings?evidence_type=guess
+ok 63 - GET /api/v1/findings?evidence_type=guess
+  ---
+  duration_ms: 0.104914
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings?topic=oxygen&topic=geometry
+ok 64 - GET /api/v1/findings?topic=oxygen&topic=geometry
+  ---
+  duration_ms: 0.069767
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search
+ok 65 - GET /api/v1/search
+  ---
+  duration_ms: 0.108085
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=
+ok 66 - GET /api/v1/search?q=
+  ---
+  duration_ms: 0.094326
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=the+of
+ok 67 - GET /api/v1/search?q=the+of
+  ---
+  duration_ms: 0.074449
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=oxygen&limit=51
+ok 68 - GET /api/v1/search?q=oxygen&limit=51
+  ---
+  duration_ms: 0.086394
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=oxygen&limit=-1
+ok 69 - GET /api/v1/search?q=oxygen&limit=-1
+  ---
+  duration_ms: 0.073148
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/search?q=oxygen&type=video
+ok 70 - GET /api/v1/search?q=oxygen&type=video
+  ---
+  duration_ms: 0.071576
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/pmma/steps?thickness_mm=1e3
+ok 71 - GET /api/v1/bass2/pmma/steps?thickness_mm=1e3
+  ---
+  duration_ms: 0.084884
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/pmma/steps?sides_burning=3
+ok 72 - GET /api/v1/bass2/pmma/steps?sides_burning=3
+  ---
+  duration_ms: 0.070529
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/fabric/outcomes?sample_reused=1
+ok 73 - GET /api/v1/bass2/fabric/outcomes?sample_reused=1
+  ---
+  duration_ms: 0.074499
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings/F-B2-01?verbose=true
+ok 74 - GET /api/v1/findings/F-B2-01?verbose=true
+  ---
+  duration_ms: 0.071789
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/findings/NOPE
+ok 75 - GET /api/v1/findings/NOPE
+  ---
+  duration_ms: 0.102932
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/studies/apollo
+ok 76 - GET /api/v1/studies/apollo
+  ---
+  duration_ms: 0.072524
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/bass2/tests/X1
+ok 77 - GET /api/v1/bass2/tests/X1
+  ---
+  duration_ms: 0.067807
+  type: 'test'
+  ...
+# Subtest: GET /api/v1/nothing/here
+ok 78 - GET /api/v1/nothing/here
+  ---
+  duration_ms: 0.058783
+  type: 'test'
+  ...
+# Subtest: GET /elsewhere
+ok 79 - GET /elsewhere
+  ---
+  duration_ms: 0.047357
+  type: 'test'
+  ...
+# Subtest: DELETE /api/v1/findings
+ok 80 - DELETE /api/v1/findings
+  ---
+  duration_ms: 0.04542
+  type: 'test'
+  ...
+# Subtest: GET returns JSON with CORS and bundle header
+ok 81 - GET returns JSON with CORS and bundle header
+  ---
+  duration_ms: 24.45312
+  type: 'test'
+  ...
+# Subtest: OPTIONS preflight returns 204
+ok 82 - OPTIONS preflight returns 204
+  ---
+  duration_ms: 0.504643
+  type: 'test'
+  ...
+# Subtest: HEAD returns no body
+ok 83 - HEAD returns no body
+  ---
+  duration_ms: 1.86856
+  type: 'test'
+  ...
+# Subtest: errors are not cached
+ok 84 - errors are not cached
+  ---
+  duration_ms: 0.776085
+  type: 'test'
+  ...
+# Subtest: POST is rejected
+ok 85 - POST is rejected
+  ---
+  duration_ms: 0.5278
+  type: 'test'
+  ...
+# Subtest: encoded query values decode like the Python service
+ok 86 - encoded query values decode like the Python service
+  ---
+  duration_ms: 0.949552
+  type: 'test'
+  ...
+1..86
+# tests 86
+# suites 0
+# pass 86
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 267.657847

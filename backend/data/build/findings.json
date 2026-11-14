@@ -1,0 +1,1745 @@
+[
+ {
+  "id": "F-B2-01",
+  "title": "Thicker PMMA sheets spread flame more slowly (descriptive)",
+  "research_question": "How does fuel thickness relate to opposed-flow flame spread rate over PMMA sheets in microgravity?",
+  "topics": [
+   "geometry",
+   "airflow"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Table 5.1, p. 57; Section 5.6, p. 61; Conclusions, p. 63"
+   },
+   {
+    "source_id": "SRC-VALIDATION-2026",
+    "locator": "Section 3"
+   }
+  ],
+  "test_ids": [
+   "M1",
+   "M2",
+   "M3",
+   "M4",
+   "M5",
+   "M7",
+   "M8",
+   "M9",
+   "M10",
+   "M11",
+   "M13",
+   "M14",
+   "M15",
+   "M16",
+   "M17",
+   "M18",
+   "M19",
+   "M20"
+  ],
+  "datasets": [
+   "bass2_pmma_steps",
+   "bass2_pmma_tests"
+  ],
+  "material": "Cast PMMA sheets",
+  "geometry": "Flat sheets 1-5 mm thick, 1.2 or 2.2 cm wide, one- or two-sided burning",
+  "conditions": {
+   "flow_direction": "opposed",
+   "flow_cm_s": "2-21",
+   "o2_vol_pct": "16.8-22.2",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Across 18 tests with tracked spread rates, thicker sheets had lower flame spread rates. The association holds with one value per test, so it is not an artifact of repeated flow steps.",
+  "reported_values": [
+   {
+    "quantity": "test-level Spearman rho, thickness vs mean spread rate",
+    "value": -0.718,
+    "unit": "dimensionless",
+    "note": "n = 18 tests; p = 0.0008"
+   },
+   {
+    "quantity": "cluster-bootstrap 95% interval for pooled rho",
+    "value": "-0.87 to -0.34",
+    "unit": "dimensionless",
+    "note": "5,000 resamples of whole tests"
+   },
+   {
+    "quantity": "random-intercept slope, log spread on log thickness",
+    "value": -0.77,
+    "unit": "dimensionless",
+    "note": "95% CI -1.07 to -0.47"
+   },
+   {
+    "quantity": "median of per-test mean spread, 1 mm",
+    "value": 0.0895,
+    "unit": "mm/s",
+    "note": "3 tests"
+   },
+   {
+    "quantity": "median of per-test mean spread, 5 mm",
+    "value": 0.0296,
+    "unit": "mm/s",
+    "note": "4 tests"
+   }
+  ],
+  "evidence_type": "verified_measurement",
+  "evidence_basis": "Spread rates from Table 5.1, verified cell by cell; statistics computed by TERNARY. NASA states the same direction (p. 61, p. 63).",
+  "limitations": [
+   "Thickness varied together with width, sides burning and oxygen; most combinations were run once.",
+   "Descriptive association only; not a measured thickness effect and not a predictive model.",
+   "Spread rates carry an indicative uncertainty of about 10% (Table 5.1 vs Figure 5.2 for test M8); NASA states none."
+  ],
+  "implications": [
+   "Supports describing thick structural plastics as slow but long-burning fuels in microgravity.",
+   "Not usable to predict a spread rate for an untested thickness."
+  ],
+  "checks": [
+   "pmma_thickness_rho"
+  ],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Verified measurement",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-02",
+  "title": "Within a test, spread rate fell at every flow step, so a flow effect cannot be isolated",
+  "research_question": "Does opposed flow speed change flame spread rate over thick PMMA in BASS-II?",
+  "topics": [
+   "airflow"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Table 5.1 and Figure 5.2, p. 57; Section 5.4, p. 60"
+   },
+   {
+    "source_id": "SRC-VALIDATION-2026",
+    "locator": "Section 3"
+   }
+  ],
+  "test_ids": [
+   "M2",
+   "M3",
+   "M4",
+   "M7",
+   "M8",
+   "M10",
+   "M11",
+   "M13",
+   "M14",
+   "M16",
+   "M17",
+   "M18",
+   "M19"
+  ],
+  "datasets": [
+   "bass2_pmma_steps"
+  ],
+  "material": "Cast PMMA sheets",
+  "geometry": "Flat sheets 1-5 mm thick",
+  "conditions": {
+   "flow_direction": "opposed",
+   "flow_cm_s": "2-21",
+   "o2_vol_pct": "16.8-22.2",
+   "pressure": "about 1 atm"
+  },
+  "statement": "In all 13 tests with more than one flow step, spread rate fell at every successive step. Flow was stepped down in 12 of them; in the one test where flow was raised (M3, 10 to 20 cm/s) spread still fell (0.029 to 0.024 mm/s). Oxygen fell 0.5-2.0 vol% during each test. Flow, elapsed time and oxygen depletion are confounded.",
+  "reported_values": [
+   {
+    "quantity": "multi-step tests with spread falling at every step",
+    "value": "13 of 13",
+    "unit": "tests",
+    "note": ""
+   },
+   {
+    "quantity": "multi-step tests with flow stepped down throughout",
+    "value": "12 of 13",
+    "unit": "tests",
+    "note": ""
+   }
+  ],
+  "evidence_type": "verified_measurement",
+  "evidence_basis": "Sequence assumed to follow listed order (shown for M8 in Figure 5.2). NASA's statement that higher flow gives higher spread (p. 61) rests on per-step oxygen estimates that are not tabulated.",
+  "limitations": [
+   "Step order inferred from the listed order.",
+   "Oxygen measured only at the start and end of each test."
+  ],
+  "implications": [
+   "Do not present a flow-to-spread relationship from Table 5.1.",
+   "A future test that varies flow up and down at constant oxygen would separate the effects."
+  ],
+  "checks": [
+   "pmma_sequence_monotone"
+  ],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Verified measurement",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-03",
+  "title": "Wider 1 mm PMMA sample spread faster than a narrower one at similar oxygen",
+  "research_question": "Does sample width affect flame spread over thin PMMA sheets in microgravity?",
+  "topics": [
+   "geometry"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Table 5.1, p. 57; Section 5.6, p. 61"
+   }
+  ],
+  "test_ids": [
+   "M7",
+   "M16"
+  ],
+  "datasets": [
+   "bass2_pmma_steps"
+  ],
+  "material": "Cast PMMA sheets",
+  "geometry": "1 mm thick, two-sided; 2.2 cm (M16) vs 1.2 cm (M7) wide",
+  "conditions": {
+   "flow_direction": "opposed",
+   "flow_cm_s": "2-10",
+   "o2_vol_pct": "about 18.7-19.0 mid-test",
+   "pressure": "about 1 atm"
+  },
+  "statement": "The 2.2 cm wide sample (M16, 0.106-0.144 mm/s) spread faster than the 1.2 cm sample (M7, 0.070-0.106 mm/s) at overlapping flows and similar oxygen, matching NASA's statement.",
+  "reported_values": [
+   {
+    "quantity": "M16 spread rate range",
+    "value": "0.1062-0.144",
+    "unit": "mm/s",
+    "note": "2-5 cm/s"
+   },
+   {
+    "quantity": "M7 spread rate range",
+    "value": "0.07-0.106",
+    "unit": "mm/s",
+    "note": "3-10 cm/s"
+   }
+  ],
+  "evidence_type": "verified_measurement",
+  "evidence_basis": "One matched pair of tests.",
+  "limitations": [
+   "Single pair; no replicate.",
+   "Flow ranges overlap only partly."
+  ],
+  "implications": [
+   "Sample width matters at small scale; flame-spread rates depend on test geometry."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Verified measurement",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-04",
+  "title": "Cotton-fiberglass fabric quenched at 2-5 cm/s after flow reduction",
+  "research_question": "At what concurrent flow does SIBAL fabric quench in microgravity, and how does it vary with oxygen?",
+  "topics": [
+   "airflow",
+   "oxygen",
+   "extinction_mechanism"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Table 7.1, p. 96; Conclusions, p. 101; flow resolution p. 66"
+   },
+   {
+    "source_id": "SRC-ZHAO-2015",
+    "locator": "pp. 5-7, Fig. 7"
+   }
+  ],
+  "test_ids": [
+   "T4",
+   "T13",
+   "T14",
+   "T18",
+   "T20",
+   "T22",
+   "T21",
+   "T15",
+   "T17"
+  ],
+  "datasets": [
+   "bass2_fabric_outcomes"
+  ],
+  "material": "SIBAL fabric (75% cotton, 25% fiberglass)",
+  "geometry": "Flat sheet 1.2 or 2.2 cm wide",
+  "conditions": {
+   "flow_direction": "concurrent",
+   "flow_cm_s": "2.2-53",
+   "o2_vol_pct": "16.4-20.8",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Of 27 BASS-II fabric tests, 6 quenched after flow was reduced (final flow 2.2-5 cm/s) and 1 blew off when flow was raised to 47 cm/s; 2 attempts to 29 and 53 cm/s did not blow off. For 2.2 cm samples the quench flow rose from 2.2 to 2.8 cm/s as oxygen fell from 18.7 to 16.9 vol%.",
+  "reported_values": [
+   {
+    "quantity": "outcome counts",
+    "value": "6 quenched, 1 blow-off, 6 no ignition, 14 burned without reaching a limit",
+    "unit": "tests",
+    "note": "27 tests"
+   },
+   {
+    "quantity": "quench flow, 2.2 cm samples",
+    "value": "2.2, 2.2, 2.6, 2.8",
+    "unit": "cm/s",
+    "note": "at 18.7, 17.5, 17.4, 16.9 vol% O2"
+   }
+  ],
+  "evidence_type": "verified_measurement",
+  "evidence_basis": "Table 7.1 verified against PSI-25; quench outcomes checked against the Appendix A test log.",
+  "limitations": [
+   "Each quench flow is the last listed flow, an upper bound on the quenching velocity.",
+   "Flow display resolution is +/-0.5 cm/s, comparable to the whole 0.6 cm/s trend.",
+   "T18 is logged as a brief ignition that went out, not a controlled flow-reduction quench.",
+   "Six quench points are too few for a fitted boundary."
+  ],
+  "implications": [
+   "Supports 'quenching happens at a few cm/s' for this fabric; NASA's own wording is 'between 1 and 5 cm/s' (p. 101)."
+  ],
+  "checks": [
+   "fabric_outcome_counts"
+  ],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Verified measurement",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-05",
+  "title": "Fresh fabric samples did not ignite at 16.8% oxygen or below",
+  "research_question": "What is the lowest oxygen at which SIBAL fabric ignited and burned in BASS-II?",
+  "topics": [
+   "oxygen",
+   "ignition"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Table 7.1, p. 96"
+   }
+  ],
+  "test_ids": [
+   "T9",
+   "T10",
+   "T12",
+   "T14",
+   "T17"
+  ],
+  "datasets": [
+   "bass2_fabric_outcomes"
+  ],
+  "material": "SIBAL fabric",
+  "geometry": "Flat sheet 2.2 cm wide",
+  "conditions": {
+   "flow_direction": "concurrent",
+   "flow_cm_s": "4-10",
+   "o2_vol_pct": "16.4-16.9",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Fresh samples failed to ignite at 16.4, 16.4 and 16.8 vol% O2; the lowest oxygen with a sustained flame on a fresh sample was 16.9 vol%.",
+  "reported_values": [
+   {
+    "quantity": "lowest O2 with sustained flame, fresh sample",
+    "value": 16.9,
+    "unit": "vol%",
+    "note": "test T14 and T17"
+   }
+  ],
+  "evidence_type": "verified_measurement",
+  "evidence_basis": "Table 7.1; reused-sample failures excluded.",
+  "limitations": [
+   "The 0.1 vol% gap equals the oxygen sensor resolution.",
+   "Few attempts; ignition also depends on igniter heating, not only oxygen."
+  ],
+  "implications": [
+   "An ignition limit near 16.8-16.9 vol% for this fabric and igniter, not a material property."
+  ],
+  "checks": [
+   "fabric_ignition_floor"
+  ],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Verified measurement",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-06",
+  "title": "PMMA rods stayed flammable at lower oxygen in microgravity than in normal gravity",
+  "research_question": "What is the minimum oxygen for burning PMMA rods in microgravity, compared with the normal-gravity upward limit?",
+  "topics": [
+   "oxygen",
+   "airflow"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Section 6.1.4, pp. 68 and 76"
+   }
+  ],
+  "test_ids": [
+   "O4"
+  ],
+  "datasets": [],
+  "material": "Cast PMMA rods (clear and black)",
+  "geometry": "Rods 6.35, 9.525 and 12.7 mm diameter",
+  "conditions": {
+   "flow_direction": "concurrent and stagnation (axial)",
+   "flow_cm_s": "0-55",
+   "o2_vol_pct": "13.6-22.2",
+   "pressure": "about 1 atm"
+  },
+  "statement": "The rod flammability boundary reaches a minimum of 13.5 vol% O2 at a stretch rate of 8-12 1/s, compared with an upward-spread limit of 15.4 vol% in normal gravity with 4 cm/s added flow. NASA notes this weak-flow 'Goldilocks' zone is typical of spacecraft ventilation near surfaces.",
+  "reported_values": [
+   {
+    "quantity": "microgravity minimum O2 on the boundary",
+    "value": 13.5,
+    "unit": "vol%",
+    "note": "p. 76"
+   },
+   {
+    "quantity": "normal-gravity upward limit",
+    "value": 15.4,
+    "unit": "vol%",
+    "note": "p. 76"
+   },
+   {
+    "quantity": "lowest-oxygen quench test, final O2",
+    "value": 13.6,
+    "unit": "vol%",
+    "note": "p. 69; PSI-25 O4"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Boundary fitted by the authors; the per-test boundary data are not in this service. PSI-25 confirms test O4 at 14.8 to 13.6 vol%.",
+  "limitations": [
+   "Normal-gravity comparison uses a different test with added forced flow.",
+   "Specific to PMMA rods at 1 atm."
+  ],
+  "implications": [
+   "Ground flammability screening can be non-conservative for this material; the 2014 presentation suggested de-rating ground limits."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-07",
+  "title": "Ignition failed at higher oxygen than the level a lit flame could survive",
+  "research_question": "Are ignition limits and extinction limits the same for PMMA rods in microgravity?",
+  "topics": [
+   "ignition",
+   "oxygen"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Section 6.1.4, p. 68; Conclusions, p. 89"
+   }
+  ],
+  "test_ids": [
+   "O12"
+  ],
+  "datasets": [],
+  "material": "Cast PMMA rods",
+  "geometry": "Rods 6.35-12.7 mm diameter",
+  "conditions": {
+   "flow_direction": "concurrent and stagnation",
+   "flow_cm_s": "0-55",
+   "o2_vol_pct": "13.6-22.2",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Rods would not ignite below about 14.5 vol% O2, yet flames lit at higher oxygen survived down to 13.6 vol%. Near the limit, ignition delay grew to almost ten times the igniter-on time of the NASA-STD-6001 test.",
+  "reported_values": [
+   {
+    "quantity": "approximate ignition limit",
+    "value": 14.5,
+    "unit": "vol%",
+    "note": "p. 68"
+   },
+   {
+    "quantity": "ignition delay vs standard igniter time",
+    "value": "up to almost 10x",
+    "unit": "ratio",
+    "note": "p. 89"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Author analysis of ignition tests; per-test ignition times not in this service.",
+  "limitations": [
+   "Depends on igniter design and heating time."
+  ],
+  "implications": [
+   "A short standard ignition can label a material non-flammable that would burn if heated longer."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-08",
+  "title": "Quenching and blowoff on PMMA rods have different mechanisms",
+  "research_question": "How do low-flow quenching and high-flow blowoff differ on PMMA rods in microgravity?",
+  "topics": [
+   "extinction_mechanism",
+   "airflow"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Abstract 6.1.1, p. 64; Conclusions, pp. 89-90"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "Cast PMMA rods",
+  "geometry": "Rods 6.35-12.7 mm diameter",
+  "conditions": {
+   "flow_direction": "concurrent and stagnation",
+   "flow_cm_s": "0-55",
+   "o2_vol_pct": "13.6-22.2",
+   "pressure": "about 1 atm"
+  },
+  "statement": "At very low flow the flame shrinks to a blue hemisphere and oscillates (about 1.1 Hz) before quenching; surface radiative loss dominates. Blowoff starts with a hole in the flame sheet at the stagnation region, where heat losses are negligible. At the bottom of the flammability map the transition occurs when convective and diffusive flows are of the same order.",
+  "reported_values": [
+   {
+    "quantity": "pre-quench oscillation frequency",
+    "value": 1.1,
+    "unit": "Hz",
+    "note": "radiometer, p. 89"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Observations plus a surface energy balance by the authors.",
+  "limitations": [
+   "Mechanism inferred with a model; energy-balance terms not independently measured here."
+  ],
+  "implications": [
+   "Treat 'went out' as two different outcomes with different causes."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-09",
+  "title": "Thin PMMA low-flow extinction velocity rises as oxygen falls and does not depend on thickness",
+  "research_question": "What opposed flow is needed to sustain a flame over thin PMMA film at reduced oxygen?",
+  "topics": [
+   "oxygen",
+   "airflow",
+   "extinction_mechanism"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Table 2.1 and Section 2.2.8, p. 28"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "Thin PMMA film",
+  "geometry": "Films 100-400 micrometres thick",
+  "conditions": {
+   "flow_direction": "opposed",
+   "flow_cm_s": "below about 4",
+   "o2_vol_pct": "16 and 21",
+   "pressure": "1 atm"
+  },
+  "statement": "The critical opposed-flow velocity for radiative extinction was 10 +/- 5 mm/s at 21% O2 and 30 +/- 5 mm/s at 16%, independent of film thickness, in agreement with computation and a closed-form scale analysis.",
+  "reported_values": [
+   {
+    "quantity": "critical extinction velocity at 21% O2",
+    "value": 10,
+    "unit": "mm/s",
+    "note": "+/- 5; experiment"
+   },
+   {
+    "quantity": "critical extinction velocity at 16% O2",
+    "value": 30,
+    "unit": "mm/s",
+    "note": "+/- 5; experiment"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Experimental values tabulated by the authors in Table 2.1; the underlying tests are not individually traced here.",
+  "limitations": [
+   "Two oxygen levels only.",
+   "The report notes significant uncertainty in low-velocity flow calibration (p. 13)."
+  ],
+  "implications": [
+   "Lower oxygen narrows the flammable flow range from below."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-10",
+  "title": "Small microgravity flames burned fuel-rich and made disproportionate CO",
+  "research_question": "How complete is combustion in BASS-II flames?",
+  "topics": [
+   "combustion_products",
+   "oxygen"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Sections 1.4-1.6, pp. 6-11; Section 6.1.6, p. 89"
+   },
+   {
+    "source_id": "SRC-ICES-2015-196",
+    "locator": "Figs. 5-8"
+   },
+   {
+    "source_id": "SRC-PSI-25",
+    "locator": "O2, CO2 and CO columns"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [
+   "bass2_tests"
+  ],
+  "material": "PMMA, SIBAL fabric",
+  "geometry": "All BASS-II geometries",
+  "conditions": {
+   "flow_direction": "mixed",
+   "flow_cm_s": "0-55",
+   "o2_vol_pct": "13.6-22.2",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Oxygen consumed tracked CO2 produced at the PMMA stoichiometric ratio; CO to CO2 ratios were about ten times those of efficient combustion; the average global equivalence ratio was 1.3 (fuel rich). Rod flames became more fuel-rich as minimum oxygen was approached. Reproduced from PSI-25: O2-consumed to CO2-produced slope 1.23 for rods and 1.20 for flat PMMA, against 1.2 for stoichiometric PMMA.",
+  "reported_values": [
+   {
+    "quantity": "global equivalence ratio",
+    "value": 1.3,
+    "unit": "dimensionless",
+    "note": "author, p. 11"
+   },
+   {
+    "quantity": "dO2/dCO2 slope, PMMA rods (PSI-25)",
+    "value": 1.23,
+    "unit": "dimensionless",
+    "note": "TERNARY reproduction, 51 tests"
+   },
+   {
+    "quantity": "dO2/dCO2 slope, flat PMMA (PSI-25)",
+    "value": 1.2,
+    "unit": "dimensionless",
+    "note": "TERNARY reproduction, 40 tests"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Equivalence ratio and CO conclusions are the authors'. The stoichiometric slope is reproduced from PSI-25 gas readings and checked automatically.",
+  "limitations": [
+   "Whole-glovebox before/after readings at 0.1 vol% resolution.",
+   "Single study; hold back from cross-study claims."
+  ],
+  "implications": [
+   "CO toxicity can matter before a microgravity fire is large."
+  ],
+  "checks": [
+   "stoichiometric_slope"
+  ],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-11",
+  "title": "Flames always went out when the fan was turned off (ISS-like air)",
+  "research_question": "Does stopping ventilation extinguish small solid-fuel flames in ISS air?",
+  "topics": [
+   "ventilation_change",
+   "airflow"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-OLSON-2019",
+    "locator": "Abstract"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "PMMA and SIBAL fabric",
+  "geometry": "BASS-II samples",
+  "conditions": {
+   "flow_direction": "opposed and concurrent",
+   "flow_cm_s": "reduced to 0",
+   "o2_vol_pct": "ISS-like air and below",
+   "pressure": "about 1 atm"
+  },
+  "statement": "In BASS-II, flames always quenched when the fan was turned off, supporting the ISS practice of stopping ventilation on fire detection. The authors warn this may not carry over to elevated-oxygen, low-pressure exploration atmospheres.",
+  "reported_values": [],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Abstract-level statement.",
+  "limitations": [
+   "Full paper not read.",
+   "Small samples in a small duct."
+  ],
+  "implications": [
+   "Contrast with Saffire V (F-S45-01) before generalizing the fan-off practice."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B2-12",
+  "title": "Nomex III samples did not ignite in BASS-II",
+  "research_question": "Is Nomex, used on ISS as a fire barrier, flammable in BASS-II conditions?",
+  "topics": [
+   "materials",
+   "ignition"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Section 3.1, p. 46"
+   }
+  ],
+  "test_ids": [
+   "F1",
+   "F2",
+   "F3"
+  ],
+  "datasets": [
+   "bass2_tests"
+  ],
+  "material": "Nomex III (natural)",
+  "geometry": "Flat sample",
+  "conditions": {
+   "flow_direction": "concurrent",
+   "flow_cm_s": "8-15",
+   "o2_vol_pct": "21-22.2",
+   "pressure": "about 1 atm"
+  },
+  "statement": "All three Nomex III samples failed to ignite. In a separate test (F4), a wax candle ejected a droplet of wax upstream, which the report cites as the hazard of melting plastics throwing burning droplets in microgravity.",
+  "reported_values": [],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Outcomes reported by the project scientist; conditions in PSI-25 rows F1-F4.",
+  "limitations": [
+   "Three samples; contrasts with BASS, where Nomex III did burn at 22% O2 and 14-15 cm/s (F-B1-02)."
+  ],
+  "implications": [
+   "Material flammability depends on sample and conditions; one outcome is not a rating."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-L18-01",
+  "title": "Opposed spread over PMMA rods rises then falls with flow; none below 0.6 cm/s",
+  "research_question": "How does opposed flow affect flame spread over PMMA cylinders in microgravity compared with normal gravity?",
+  "topics": [
+   "airflow",
+   "oxygen"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-LINK-2018",
+    "locator": "Fig. 6a-b; Figs. 7-8"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "Black cast PMMA rods",
+  "geometry": "Rods 6.4, 9.5 and 12.7 mm diameter",
+  "conditions": {
+   "flow_direction": "opposed",
+   "flow_cm_s": "0.4-8",
+   "o2_vol_pct": "16-21 tested (abstract says 15-21)",
+   "pressure": "about 1 atm"
+  },
+  "statement": "In microgravity, spread rate first increased then decreased as opposed flow rose, and no spread occurred below 0.6 cm/s. Flames spread at 17% O2 in microgravity, while in normal gravity no flame could exist at 18% or below. Above about 19% O2 spread was faster in normal gravity; below it, faster in microgravity.",
+  "reported_values": [
+   {
+    "quantity": "minimum flow for spread",
+    "value": 0.6,
+    "unit": "cm/s",
+    "note": "microgravity"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Same BASS-II campaign (Fernandez-Pello rods). Per-test values are in supplementary tables not obtained.",
+  "limitations": [
+   "Not independent of BASS-II.",
+   "Authors note test points were not collected systematically; O2 uncertainty +/-0.3%."
+  ],
+  "implications": [
+   "Gentle drafts, not still air or strong wind, are the worst case for opposed spread over rods."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-OF15-01",
+  "title": "Concurrent-flow PMMA rod tests mapped both blowoff and quenching limits",
+  "research_question": "What are the concurrent-flow flammability limits of PMMA rods in microgravity?",
+  "topics": [
+   "extinction_mechanism",
+   "oxygen",
+   "airflow"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-OLSON-FERKUL-2015",
+    "locator": "Abstract; Figure 4 discussion"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "Cast PMMA rods",
+  "geometry": "Rod radii 0.318, 0.476 and 0.635 cm",
+  "conditions": {
+   "flow_direction": "concurrent (axial, onto the rod tip)",
+   "flow_cm_s": "0-55",
+   "o2_vol_pct": "about 14-21",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Twenty-four concurrent-flow tests obtained blowoff and quenching limits at several oxygen levels. The blowoff branch is linear in oxygen and stretch rate. The lowest test point was 13.6% O2; extrapolating the blowoff line to zero stretch gives 13.3% O2.",
+  "reported_values": [
+   {
+    "quantity": "tests reported",
+    "value": 24,
+    "unit": "tests",
+    "note": "reconciled: Summary Report lists 27 Olson tests including O20-O22 run in Feb 2016"
+   },
+   {
+    "quantity": "blowoff-line intercept at zero stretch",
+    "value": 13.3,
+    "unit": "vol%",
+    "note": "Figure 4 fit"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Same BASS-II campaign; reported by the authors.",
+  "limitations": [
+   "Not independent of the Summary Report."
+  ],
+  "implications": [
+   "See F-OF15-02 for the proposed ground-test method."
+  ],
+  "checks": [
+   "olson_test_count_reconciliation"
+  ],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-OF15-02",
+  "title": "Proposed: extrapolate a normal-gravity blowoff line to zero stretch to estimate microgravity limits",
+  "research_question": "Can a ground test conservatively estimate the microgravity oxygen limit?",
+  "topics": [
+   "oxygen",
+   "materials"
+  ],
+  "study_id": "BASS-II",
+  "source_refs": [
+   {
+    "source_id": "SRC-OLSON-FERKUL-2015",
+    "locator": "Figure 4 discussion"
+   },
+   {
+    "source_id": "SRC-TM-2021-0011385",
+    "locator": "Conclusions, p. 89"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "PMMA rods",
+  "geometry": "Rods",
+  "conditions": {
+   "flow_direction": "axial",
+   "flow_cm_s": "n/a",
+   "o2_vol_pct": "n/a",
+   "pressure": "1 atm"
+  },
+  "statement": "The authors propose that linearly extrapolating blowoff data to zero stretch could give a conservative estimate of the minimum oxygen for burning, a limit current ground methods cannot resolve.",
+  "reported_values": [],
+  "evidence_type": "hypothesis",
+  "evidence_basis": "Proposed test method; not validated across materials in the cited work.",
+  "limitations": [
+   "Demonstrated for PMMA rods only."
+  ],
+  "implications": [
+   "Candidate route from microgravity data to ground screening."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids-II",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_experiment",
+  "evidence_type_label": "Hypothesis",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B1-01",
+  "title": "Flames most sensitive to flow below 5 cm/s; dim blue flames can persist below 1 cm/s",
+  "research_question": "How sensitive are solid-fuel flames to low ventilation speeds in microgravity?",
+  "topics": [
+   "airflow"
+  ],
+  "study_id": "BASS",
+  "source_refs": [
+   {
+    "source_id": "SRC-FERKUL-2013",
+    "locator": "Summary; Results: thin fuel flame spread and extinction"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "Thin and thick solids, PMMA",
+  "geometry": "Flat samples, spheres",
+  "conditions": {
+   "flow_direction": "opposed and concurrent",
+   "flow_cm_s": "0-40",
+   "o2_vol_pct": "17-21.5",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Flames were especially sensitive to flow between 0 and 5 cm/s. Below 1 cm/s they became dim, blue and stable, and small acrylic flames burned for over 5 minutes before self-extinguishing. Concurrent spread rose linearly with flow; near 10 cm/s, spread was 2.55 mm/s concurrent vs 1.21 mm/s opposed; concurrent quenching occurred around 1 cm/s.",
+  "reported_values": [
+   {
+    "quantity": "concurrent spread near 10 cm/s",
+    "value": 2.55,
+    "unit": "mm/s",
+    "note": "thin fuel"
+   },
+   {
+    "quantity": "opposed spread near 10 cm/s",
+    "value": 1.21,
+    "unit": "mm/s",
+    "note": "thin fuel"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Presentation slides.",
+  "limitations": [
+   "Same hardware and team as BASS-II."
+  ],
+  "implications": [
+   "A small fire can persist undetected and grow when flow returns."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_lineage",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-B1-02",
+  "title": "Ultem and Nomex HT90-40 did not burn in ISS air; nitrogen did not extinguish thick PMMA",
+  "research_question": "Which materials burned in BASS, and did nitrogen suppress flames?",
+  "topics": [
+   "materials"
+  ],
+  "study_id": "BASS",
+  "source_refs": [
+   {
+    "source_id": "SRC-FERKUL-2013",
+    "locator": "Material flammability results; Experiment operation"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "Ultem 1000, Nomex HT90-40, Nomex III, PMMA",
+  "geometry": "Flat samples and spheres",
+  "conditions": {
+   "flow_direction": "concurrent",
+   "flow_cm_s": "about 15",
+   "o2_vol_pct": "21-22",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Ultem and Nomex HT90-40 did not burn at 21-22% O2 and about 15 cm/s; Nomex III did burn at 22% O2 and 14-15 cm/s. A nitrogen jet at 500 cc/min weakened but did not extinguish a PMMA sphere flame; thick fuels store heat.",
+  "reported_values": [],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Presentation slides; no suppression success rates given.",
+  "limitations": [
+   "Few samples; narrower samples than ground tests."
+  ],
+  "implications": [
+   "Gas suppression of thick fuels may be ineffective at practical flow rates."
+  ],
+  "checks": [],
+  "study_name": "Burning and Suppression of Solids",
+  "lineage_group": "BASS",
+  "independence_from_bass2": "same_lineage",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": false
+ },
+ {
+  "id": "F-S1-01",
+  "title": "Large-scale fabric fire: concurrent spread faster than opposed, and slower than in small ducts",
+  "research_question": "How does flame spread over a large fabric sheet in a spacecraft compare with small-duct results?",
+  "topics": [
+   "airflow",
+   "geometry"
+  ],
+  "study_id": "SAFFIRE-I-III",
+  "source_refs": [
+   {
+    "source_id": "SRC-URBAN-2018",
+    "locator": "Slides 17, 19-20, 26, 32"
+   },
+   {
+    "source_id": "SRC-URBAN-2017",
+    "locator": "Abstract"
+   }
+  ],
+  "test_ids": [
+   "Saffire 1-1",
+   "Saffire 1-2",
+   "Saffire 3-1",
+   "Saffire 3-2"
+  ],
+  "datasets": [],
+  "material": "SIBAL cotton-fiberglass fabric",
+  "geometry": "94 x 40.6 cm sheet",
+  "conditions": {
+   "flow_direction": "concurrent and opposed",
+   "flow_cm_s": "20 (I), 25 (III)",
+   "o2_vol_pct": "ISS-like air",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Concurrent spread was 1.8 mm/s at 20 cm/s and 2.3 mm/s at 25 cm/s; opposed spread was 1.3 and 0.98 mm/s. The concurrent flame reached a limiting size instead of accelerating as in normal gravity, and spread more slowly than in earlier small-tunnel work, attributed to hot-gas flow acceleration in small ducts.",
+  "reported_values": [
+   {
+    "quantity": "concurrent spread, Saffire I",
+    "value": 1.8,
+    "unit": "mm/s",
+    "note": "20 cm/s"
+   },
+   {
+    "quantity": "opposed spread, Saffire I",
+    "value": 1.3,
+    "unit": "mm/s",
+    "note": "20 cm/s"
+   },
+   {
+    "quantity": "concurrent spread, Saffire III",
+    "value": 2.3,
+    "unit": "mm/s",
+    "note": "25 cm/s"
+   },
+   {
+    "quantity": "opposed spread, Saffire III",
+    "value": 0.98,
+    "unit": "mm/s",
+    "note": "25 cm/s"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Author-reported measurements from slides; underlying PSI tables (PSI-98, PSI-100) not reconciled here.",
+  "limitations": [
+   "Slides give conflicting burn durations.",
+   "Not numerically comparable with BASS-II (different duct, scale and sample)."
+  ],
+  "implications": [
+   "Small-duct spread rates cannot be scaled to spacecraft size."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment I-III",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S2-01",
+  "title": "Saffire II material outcomes differed by material",
+  "research_question": "Which spacecraft materials burned in large-scale Saffire II tests?",
+  "topics": [
+   "materials"
+  ],
+  "study_id": "SAFFIRE-I-III",
+  "source_refs": [
+   {
+    "source_id": "SRC-URBAN-2018",
+    "locator": "Slides 15, 32"
+   }
+  ],
+  "test_ids": [
+   "2-1",
+   "2-2",
+   "2-3",
+   "2-4",
+   "2-5",
+   "2-6",
+   "2-7",
+   "2-8",
+   "2-9"
+  ],
+  "datasets": [],
+  "material": "Silicone, SIBAL, Nomex, PMMA",
+  "geometry": "5 cm wide, 29 cm long samples",
+  "conditions": {
+   "flow_direction": "concurrent and opposed",
+   "flow_cm_s": "mostly 20",
+   "o2_vol_pct": "about 21.5-22.1",
+   "pressure": "about 1 atm"
+  },
+  "statement": "Silicone samples showed no significant burn; SIBAL burned the full 29 cm at 2.1-2.6 mm/s; Nomex barely burned; PMMA burned about 10 cm over 600-900 s.",
+  "reported_values": [
+   {
+    "quantity": "SIBAL spread",
+    "value": "2.1-2.6",
+    "unit": "mm/s",
+    "note": "two samples"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Slides; PSI-99 table disagrees with NTRS for samples 2-1 and 2-6 (reported by another team, unverified).",
+  "limitations": [
+   "Flammability limit values not reported."
+  ],
+  "implications": [
+   "Material ranking must be established per material and condition."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment I-III",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S45-01",
+  "title": "At increased oxygen, flames survived reduced or stopped flow and could reignite",
+  "research_question": "Does reducing or stopping ventilation extinguish fires in exploration-like atmospheres?",
+  "topics": [
+   "ventilation_change",
+   "oxygen",
+   "airflow"
+  ],
+  "study_id": "SAFFIRE-IV-V",
+  "source_refs": [
+   {
+    "source_id": "SRC-URBAN-2021",
+    "locator": "Slides 5, 7-8"
+   }
+  ],
+  "test_ids": [
+   "V-2"
+  ],
+  "datasets": [],
+  "material": "Cotton jersey (V-2); a PMMA sample (slide 8, test not named)",
+  "geometry": "Large samples, 40 cm wide",
+  "conditions": {
+   "flow_direction": "concurrent",
+   "flow_cm_s": "20, then reduced, then 0",
+   "o2_vol_pct": "25.4-26.2 (Saffire V, as executed)",
+   "pressure": "70.7-72.6 kPa"
+  },
+  "statement": "For a thin charring fuel at increased oxygen (V-2, cotton jersey; low flow for 35 s, flow off for 70 s) NASA concludes extinguishment cannot be assumed to occur rapidly in quiescent conditions. On a bubbling polymer, the flame shrank during 65 s of reduced flow but survived a 15 s no-flow interval, and after going out below the sample for 6.4 s it reignited.",
+  "reported_values": [
+   {
+    "quantity": "no-flow interval survived",
+    "value": 15,
+    "unit": "s",
+    "note": "PMMA, slide 8"
+   },
+   {
+    "quantity": "local extinction before reignition",
+    "value": 6.4,
+    "unit": "s",
+    "note": "slide 8"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Author observations from flight video, shown as embedded video not playable in the PDF.",
+  "limitations": [
+   "Few events; the PMMA test on slide 8 is not identified by number.",
+   "Different atmosphere, scale and duct from BASS-II."
+  ],
+  "implications": [
+   "Do not assume ISS fan-off practice extinguishes fires in exploration atmospheres."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment IV and V",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S45-02",
+  "title": "Proposed: a small residual flow may sometimes extinguish better than none",
+  "research_question": "Is low flow ever better than no flow for extinguishing a microgravity fire?",
+  "topics": [
+   "ventilation_change"
+  ],
+  "study_id": "SAFFIRE-IV-V",
+  "source_refs": [
+   {
+    "source_id": "SRC-URBAN-2021",
+    "locator": "Slide 9"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "One-sided PMMA",
+  "geometry": "Large sample",
+  "conditions": {
+   "flow_direction": "concurrent",
+   "flow_cm_s": "5 for 300 s",
+   "o2_vol_pct": "Saffire IV or V atmosphere (not stated on slide)",
+   "pressure": "not stated on slide"
+  },
+  "statement": "NASA suggests that in some circumstances reducing air flow to a small value rather than stopping it may disperse fuel vapour and cool the material enough to enable extinction.",
+  "reported_values": [],
+  "evidence_type": "hypothesis",
+  "evidence_basis": "Worded as 'may be useful'; one flow and radiometer trace shown.",
+  "limitations": [
+   "Single test; slide does not state the atmosphere."
+  ],
+  "implications": [
+   "Candidate research question for ventilation-based suppression strategy."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment IV and V",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Hypothesis",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S45-03",
+  "title": "Thick-fuel flames reached finite size; concurrent flames pinned to the leading edge",
+  "research_question": "How do flames grow on thick fuels at spacecraft scale?",
+  "topics": [
+   "geometry",
+   "airflow"
+  ],
+  "study_id": "SAFFIRE-IV-V",
+  "source_refs": [
+   {
+    "source_id": "SRC-URBAN-2021",
+    "locator": "Slide 13"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "PMMA, fabrics",
+  "geometry": "Large thin and thick samples",
+  "conditions": {
+   "flow_direction": "concurrent and opposed",
+   "flow_cm_s": "20",
+   "o2_vol_pct": "22.0-26.2",
+   "pressure": "70.7-100 kPa"
+  },
+  "statement": "Flames developed to nearly steady lengths in all configurations. On thick fuels in concurrent flow they did not spread but stayed pinned to the leading edge. Once a flame reached its limiting size, downstream flames were inhibited or extinguished by its oxygen 'shadow'. In one case a flame jumped a 4.5 cm gap to a previously warmed PMMA surface. Thick-fuel growth was dissimilar from NASA-STD-6001 Test 1.",
+  "reported_values": [
+   {
+    "quantity": "gap jumped by flame",
+    "value": 4.5,
+    "unit": "cm",
+    "note": "single event"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Overview slide; supporting data not shown.",
+  "limitations": [
+   "Preliminary results."
+  ],
+  "implications": [
+   "Test 1 results need interpretation for microgravity thick-fuel growth; the authors say this does not invalidate the test."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment IV and V",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S5-01",
+  "title": "Ribs accelerated opposed flame spread on PMMA, more so for narrower ribs",
+  "research_question": "How does surface structure affect opposed flame spread over thick PMMA?",
+  "topics": [
+   "geometry",
+   "airflow"
+  ],
+  "study_id": "SAFFIRE-IV-V",
+  "source_refs": [
+   {
+    "source_id": "SRC-EIGENBROD-2021",
+    "locator": "Slides 3, 5, 7, 11"
+   },
+   {
+    "source_id": "SRC-URBAN-2021",
+    "locator": "Slides 5, 12"
+   }
+  ],
+  "test_ids": [
+   "V-4"
+  ],
+  "datasets": [],
+  "material": "Cast PMMA, structured",
+  "geometry": "200 x 400 mm, 10 mm base with 3 mm ribs 1-10 mm wide on both sides (16 mm total), 2 cm between rib faces",
+  "conditions": {
+   "flow_direction": "opposed",
+   "flow_cm_s": "20 for 360 s, then 5 for 300 s (ZARM)",
+   "o2_vol_pct": "25.7 as executed (NASA); 26.9 inflow (ZARM)",
+   "pressure": "72.6 kPa as executed (NASA); 761 hPa (ZARM)"
+  },
+  "statement": "Ribs significantly accelerated the opposed spread rate, and the narrower the rib, the larger the effect. Spread along the 10 mm rib was only slightly faster than over a flat plate.",
+  "reported_values": [],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Based on flame-front tracking per rib (slide 7), but the tracking plots export with no data, so no spread rates can be quoted.",
+  "limitations": [
+   "No numeric spread rates available.",
+   "Single test.",
+   "Two NASA-coauthored sources give different atmospheres."
+  ],
+  "implications": [
+   "Flat-sample flammability tests may underestimate spread over structured parts."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment IV and V",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S5-02",
+  "title": "Wider ribs carried more independently propagating edge flames",
+  "research_question": "How does rib width change flame structure?",
+  "topics": [
+   "geometry"
+  ],
+  "study_id": "SAFFIRE-IV-V",
+  "source_refs": [
+   {
+    "source_id": "SRC-EIGENBROD-2021",
+    "locator": "Slide 11"
+   }
+  ],
+  "test_ids": [
+   "V-4"
+  ],
+  "datasets": [],
+  "material": "Cast PMMA, structured",
+  "geometry": "Ribs 1-10 mm wide",
+  "conditions": {
+   "flow_direction": "opposed",
+   "flow_cm_s": "20",
+   "o2_vol_pct": "25.7-26.9",
+   "pressure": "72.6-76.1 kPa"
+  },
+  "statement": "Wider ribs showed increasingly independent edge flames. A flame that reached the specimen's leading edge stayed there and spread only across the edge's width.",
+  "reported_values": [],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Observation from video.",
+  "limitations": [
+   "Single test; images only."
+  ],
+  "implications": [
+   "Edges of structured parts are preferred flame sites."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment IV and V",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S5-03",
+  "title": "Oxygen 'shadowing' limits flame length and extinguishes downstream flames",
+  "research_question": "Why do microgravity flames on thick fuels reach finite lengths?",
+  "topics": [
+   "geometry",
+   "oxygen"
+  ],
+  "study_id": "SAFFIRE-IV-V",
+  "source_refs": [
+   {
+    "source_id": "SRC-EIGENBROD-2021",
+    "locator": "Slide 11"
+   },
+   {
+    "source_id": "SRC-URBAN-2021",
+    "locator": "Slide 13"
+   }
+  ],
+  "test_ids": [
+   "V-4"
+  ],
+  "datasets": [],
+  "material": "PMMA",
+  "geometry": "Structured and flat samples",
+  "conditions": {
+   "flow_direction": "opposed and concurrent",
+   "flow_cm_s": "20",
+   "o2_vol_pct": "22-26.9",
+   "pressure": "70.7-100 kPa"
+  },
+  "statement": "Flame lengths are finite because pyrolysing material under the flame is protected by it from oxygen; flames in the shadow of other flames extinguish. NASA's overview slide reports downstream flames inhibited or extinguished by the upstream flame's oxygen shadow.",
+  "reported_values": [],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Mechanistic interpretation of observed finite flame lengths; oxygen concentrations near the flame were not measured in the slides.",
+  "limitations": [
+   "Interpretation; no local oxygen measurement shown."
+  ],
+  "implications": [
+   "Consistent with BASS-II fuel-rich burning (F-B2-10), but a different experiment and scale."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment IV and V",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S5-04",
+  "title": "Small flow disturbances increased propagation speed and changed ignition",
+  "research_question": "How sensitive is opposed flame spread to disturbances in the incoming flow?",
+  "topics": [
+   "airflow",
+   "ventilation_change"
+  ],
+  "study_id": "SAFFIRE-IV-V",
+  "source_refs": [
+   {
+    "source_id": "SRC-EIGENBROD-2021",
+    "locator": "Slides 6, 10, 11"
+   }
+  ],
+  "test_ids": [
+   "V-4"
+  ],
+  "datasets": [],
+  "material": "Cast PMMA, structured",
+  "geometry": "Ribs 8-10 region",
+  "conditions": {
+   "flow_direction": "opposed",
+   "flow_cm_s": "about 20 (inlet 19.8 shown in flow-visualisation frame)",
+   "o2_vol_pct": "25.7-26.9",
+   "pressure": "72.6-76.1 kPa"
+  },
+  "statement": "Flow visualisation shows the incoming flow slightly disturbed by incompletely burned remnants of the earlier cotton sample, a clearly perturbed flow field, and deviating combustion progress at ribs 8-10. The authors conclude that even small perturbations of the stratification considerably increase propagation velocity, and that the disturbance delayed ignition and produced deflagration-type ignition.",
+  "reported_values": [],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Qualitative flow visualisation (slides 6, 10) plus tracking not shown in the PDF.",
+  "limitations": [
+   "Upstream disturbance was incidental, not controlled.",
+   "No numeric velocity change reported."
+  ],
+  "implications": [
+   "Previous burns in the same vehicle can alter later fires; cabin flow history matters."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment IV and V",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S5-05",
+  "title": "Proposed: disturbing a stratified microgravity fire during firefighting could cause a backdraft",
+  "research_question": "Could active firefighting create a backdraft hazard in microgravity?",
+  "topics": [
+   "ventilation_change",
+   "combustion_products"
+  ],
+  "study_id": "SAFFIRE-IV-V",
+  "source_refs": [
+   {
+    "source_id": "SRC-EIGENBROD-2021",
+    "locator": "Slide 11"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "PMMA",
+  "geometry": "n/a",
+  "conditions": {
+   "flow_direction": "n/a",
+   "flow_cm_s": "n/a",
+   "o2_vol_pct": "n/a",
+   "pressure": "n/a"
+  },
+  "statement": "The authors deduce that disturbing the stratification during active fire tackling could quickly lead to dangerous backdraft, all the more because microgravity combustion produces much larger quantities of combustible flue gases than ground fires.",
+  "reported_values": [],
+  "evidence_type": "hypothesis",
+  "evidence_basis": "Deduced in the conclusions; no backdraft was tested and no flue-gas quantity is reported in the slides.",
+  "limitations": [
+   "Untested.",
+   "The flue-gas comparison is asserted, not measured in this source; BASS-II fuel-rich burning (F-B2-10) is consistent but separate."
+  ],
+  "implications": [
+   "Research question for suppression procedures; not an operating guideline."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment IV and V",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Hypothesis",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-S5-06",
+  "title": "Authors judge concurrent flame propagation unlikely on the structured sample",
+  "research_question": "Did flames spread with the flow on the structured PMMA sample?",
+  "topics": [
+   "airflow",
+   "geometry"
+  ],
+  "study_id": "SAFFIRE-IV-V",
+  "source_refs": [
+   {
+    "source_id": "SRC-EIGENBROD-2021",
+    "locator": "Slide 11"
+   }
+  ],
+  "test_ids": [
+   "V-4"
+  ],
+  "datasets": [],
+  "material": "Cast PMMA, structured",
+  "geometry": "Structured sample",
+  "conditions": {
+   "flow_direction": "opposed test",
+   "flow_cm_s": "20 then 5",
+   "o2_vol_pct": "25.7-26.9",
+   "pressure": "72.6-76.1 kPa"
+  },
+  "statement": "The authors state the experiment shows concurrent flame propagation is unlikely.",
+  "reported_values": [],
+  "evidence_type": "hypothesis",
+  "evidence_basis": "Generalization from an opposed-flow test; the basis is not explained in the slides. Consistent with NASA's slide 13 observation that thick-fuel concurrent flames stayed pinned to the leading edge.",
+  "limitations": [
+   "Scope unclear; conflicts with concurrent spread observed on thin fuels (F-S1-01)."
+  ],
+  "implications": [
+   "Do not generalize beyond thick structured PMMA."
+  ],
+  "checks": [],
+  "study_name": "Spacecraft Fire Safety Experiment IV and V",
+  "lineage_group": "Saffire",
+  "independence_from_bass2": "separate_experiment_shared_team",
+  "evidence_type_label": "Hypothesis",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-GEL-01",
+  "title": "SoFIE-GEL: two quenching, two blowoff and one transitional extinction on PMMA spheres",
+  "research_question": "How do quenching and blowoff differ on a thick PMMA sphere in an independent apparatus?",
+  "topics": [
+   "extinction_mechanism",
+   "airflow",
+   "oxygen"
+  ],
+  "study_id": "SOFIE-GEL",
+  "source_refs": [
+   {
+    "source_id": "SRC-GEL-2024",
+    "locator": "Table 1, p. 3; pp. 3-8"
+   }
+  ],
+  "test_ids": [
+   "Case 1",
+   "Case 2",
+   "Case 3",
+   "Case 4",
+   "Case 5"
+  ],
+  "datasets": [],
+  "material": "Cast PMMA",
+  "geometry": "4 cm diameter sphere",
+  "conditions": {
+   "flow_direction": "forced flow onto sphere",
+   "flow_cm_s": "0.44-49.68 (cases)",
+   "o2_vol_pct": "13.54-20.77 at extinction",
+   "pressure": "1.03-1.07 atm"
+  },
+  "statement": "Quenching at 4.83 cm/s (14.21% O2) and 0.44 cm/s (20.77% O2); blowoff at 34.28 cm/s (14.99%) and 49.68 cm/s (14.37%); a smooth transition at 11.50 cm/s (13.54%). In quenching the flame tip shrinks upstream and pulsates; in blowoff a hole opens at the stagnation point and the flame base pulsates. Heat loss matters for quenching but only modestly for blowoff.",
+  "reported_values": [
+   {
+    "quantity": "quench case flows",
+    "value": "4.83, 0.44",
+    "unit": "cm/s",
+    "note": "at 14.21 and 20.77 vol% O2"
+   },
+   {
+    "quantity": "blowoff case flows",
+    "value": "34.28, 49.68",
+    "unit": "cm/s",
+    "note": "at 14.99 and 14.37 vol% O2"
+   },
+   {
+    "quantity": "transition case",
+    "value": 11.5,
+    "unit": "cm/s",
+    "note": "13.54 vol% O2"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Author-reported case values from Table 1 of a manuscript.",
+  "limitations": [
+   "Five cases; manuscript version.",
+   "Sphere geometry; not numerically comparable with BASS-II rods or fabric."
+  ],
+  "implications": [
+   "Independent support that quenching and blowoff are distinct mechanisms that meet in a transition region."
+  ],
+  "checks": [],
+  "study_name": "Solid Fuel Ignition and Extinction - Growth and Extinction Limit",
+  "lineage_group": "SoFIE",
+  "independence_from_bass2": "separate_investigation",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-FLEX-01",
+  "title": "FLEX catalogues 284 droplet tests without interpreting them",
+  "research_question": "What does the FLEX dataset contain and how should its outcomes be read?",
+  "topics": [
+   "dataset_scope",
+   "extinction_mechanism"
+  ],
+  "study_id": "FLEX",
+  "source_refs": [
+   {
+    "source_id": "SRC-FLEX-TP-2015",
+    "locator": "Executive Summary, p. 1; Sections 5-6, pp. 16-17; Table IX, p. 20"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "Methanol and n-heptane droplets",
+  "geometry": "Droplets 2-5 mm",
+  "conditions": {
+   "flow_direction": "quiescent or slow fiber translation",
+   "flow_cm_s": "n/a",
+   "o2_vol_pct": "about 12-34 mole fraction range in PSI-69",
+   "pressure": "0.70-3.05 atm"
+  },
+  "statement": "The report presents the first 284 tests and states it does not interpret them. A fuel-needle contaminant probably caused the disruptive endings for methanol, so 'Disruption' is not a fire outcome.",
+  "reported_values": [
+   {
+    "quantity": "tests reported",
+    "value": 284,
+    "unit": "tests",
+    "note": "PSI-69 table has 274 rows; difference not reconciled"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Report statements.",
+  "limitations": [
+   "Liquid droplets; not comparable with solid-fuel spread."
+  ],
+  "implications": [
+   "Usable for suppression-by-dilution questions after reconciliation."
+  ],
+  "checks": [],
+  "study_name": "Flame Extinguishment Experiment",
+  "lineage_group": "FLEX",
+  "independence_from_bass2": "separate_investigation",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ },
+ {
+  "id": "F-SAMER-01",
+  "title": "SAME-R: most smoke particles were 200-400 nm",
+  "research_question": "What size are smoke particles from overheated spacecraft materials in microgravity?",
+  "topics": [
+   "detection"
+  ],
+  "study_id": "SAME-R",
+  "source_refs": [
+   {
+    "source_id": "SRC-SAMER-2012",
+    "locator": "Abstract"
+   }
+  ],
+  "test_ids": [],
+  "datasets": [],
+  "material": "Teflon, Kapton, cotton, silicone rubber, Pyrell",
+  "geometry": "Heated samples",
+  "conditions": {
+   "flow_direction": "n/a",
+   "flow_cm_s": "0-8.1",
+   "o2_vol_pct": "cabin air",
+   "pressure": "cabin"
+  },
+  "statement": "Most average smoke particle sizes fell between 200 and 400 nm; some quiescent cases produced substantially larger particles. Intended to guide future smoke detector design.",
+  "reported_values": [
+   {
+    "quantity": "typical mean particle size",
+    "value": "200-400",
+    "unit": "nm",
+    "note": "abstract"
+   }
+  ],
+  "evidence_type": "author_conclusion",
+  "evidence_basis": "Abstract only.",
+  "limitations": [
+   "Non-flaming; abstract-level."
+  ],
+  "implications": [
+   "Relevant to detection, not to flame spread."
+  ],
+  "checks": [],
+  "study_name": "Smoke Aerosol Measurement Experiment - Reflight",
+  "lineage_group": "SAME",
+  "independence_from_bass2": "separate_investigation",
+  "evidence_type_label": "Author conclusion",
+  "counts_as_replication_of_bass2": true
+ }
+]

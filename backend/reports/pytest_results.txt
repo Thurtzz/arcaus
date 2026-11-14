@@ -1,0 +1,56 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/ember-orbit-backend
+plugins: platformdirs-4.13.5, anyio-4.15.1
+collecting ... collected 46 items
+
+tests/test_api.py::test_health PASSED                                    [  2%]
+tests/test_api.py::test_every_finding_is_traceable PASSED                [  4%]
+tests/test_api.py::test_comparison_rows_carry_independence PASSED        [  6%]
+tests/test_api.py::test_replication_flag PASSED                          [  8%]
+tests/test_api.py::test_findings_filters PASSED                          [ 10%]
+tests/test_api.py::test_bass2_data_endpoints PASSED                      [ 13%]
+tests/test_api.py::test_errors[/api/v1/findings?colour=red-400-unknown_parameter] PASSED [ 15%]
+tests/test_api.py::test_errors[/api/v1/findings?evidence_type=guess-400-invalid_parameter] PASSED [ 17%]
+tests/test_api.py::test_errors[/api/v1/findings?topic=a&topic=b-400-duplicate_parameter] PASSED [ 19%]
+tests/test_api.py::test_errors[/api/v1/search-400-missing_parameter] PASSED [ 21%]
+tests/test_api.py::test_errors[/api/v1/search?q=-400-invalid_parameter] PASSED [ 23%]
+tests/test_api.py::test_errors[/api/v1/search?q=the%20and-400-invalid_parameter] PASSED [ 26%]
+tests/test_api.py::test_errors[/api/v1/search?q=oxygen&limit=0-400-invalid_parameter] PASSED [ 28%]
+tests/test_api.py::test_errors[/api/v1/search?q=oxygen&limit=x-400-invalid_parameter] PASSED [ 30%]
+tests/test_api.py::test_errors[/api/v1/search?q=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-400-invalid_parameter] PASSED [ 32%]
+tests/test_api.py::test_errors[/api/v1/bass2/pmma/steps?thickness_mm=thick-400-invalid_parameter] PASSED [ 34%]
+tests/test_api.py::test_errors[/api/v1/bass2/pmma/steps?tracked=yes-400-invalid_parameter] PASSED [ 36%]
+tests/test_api.py::test_errors[/api/v1/findings/F-B2-01?x=1-400-unknown_parameter] PASSED [ 39%]
+tests/test_api.py::test_errors[/api/v1/findings/NOPE-404-not_found] PASSED [ 41%]
+tests/test_api.py::test_errors[/api/v1/bass2/tests/Z9-404-not_found] PASSED [ 43%]
+tests/test_api.py::test_errors[/api/v1/unknown-404-not_found] PASSED     [ 45%]
+tests/test_api.py::test_method_not_allowed PASSED                        [ 47%]
+tests/test_api.py::test_openapi_lists_endpoints PASSED                   [ 50%]
+tests/test_consistency.py::test_all_checks_pass PASSED                   [ 52%]
+tests/test_consistency.py::test_statistics_reproduce PASSED              [ 54%]
+tests/test_consistency.py::test_check_catches_wrong_stated_value PASSED  [ 56%]
+tests/test_consistency.py::test_check_blocks_verified_measurement_outside_bass2 PASSED [ 58%]
+tests/test_consistency.py::test_check_blocks_counting_same_experiment_as_replication PASSED [ 60%]
+tests/test_consistency.py::test_check_blocks_numeric_merge PASSED        [ 63%]
+tests/test_consistency.py::test_check_blocks_unsourced_saffire_value PASSED [ 65%]
+tests/test_consistency.py::test_check_catches_unknown_test_id PASSED     [ 67%]
+tests/test_ingest.py::test_psi25_loads_with_verified_hash PASSED         [ 69%]
+tests/test_ingest.py::test_psi25_hash_mismatch_is_rejected PASSED        [ 71%]
+tests/test_ingest.py::test_missing_values_stay_missing PASSED            [ 73%]
+tests/test_ingest.py::test_date_flags_distinguish_typos_from_2016_tests PASSED [ 76%]
+tests/test_ingest.py::test_units_parsed_from_free_text PASSED            [ 78%]
+tests/test_ingest.py::test_repeated_steps_aggregate_to_independent_tests PASSED [ 80%]
+tests/test_ingest.py::test_fabric_flags PASSED                           [ 82%]
+tests/test_ingest.py::test_bad_outcome_class_rejected PASSED             [ 84%]
+tests/test_parity.py::test_write_golden PASSED                           [ 86%]
+tests/test_parity.py::test_fastapi_matches_service PASSED                [ 89%]
+tests/test_search.py::test_tokenizer_normalizes_synonyms_and_stems PASSED [ 91%]
+tests/test_search.py::test_ranking_is_deterministic PASSED               [ 93%]
+tests/test_search.py::test_relevant_findings_rank_first PASSED           [ 95%]
+tests/test_search.py::test_investigation_ranking PASSED                  [ 97%]
+tests/test_search.py::test_search_filters PASSED                         [100%]
+
+- generated xml file: /home/claude/ember-orbit-backend/reports/pytest_junit.xml -
+============================== 46 passed in 0.87s ==============================

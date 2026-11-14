@@ -1,0 +1,6 @@
+name = "arcaus"
+compatibility_date = "2026-11-14"
+
+[assets]
+directory = "./site"
+not_found_handling = "single-page-application"

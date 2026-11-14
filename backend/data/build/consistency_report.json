@@ -1,0 +1,363 @@
+{
+ "checks": [
+  {
+   "id": "DATA-01",
+   "category": "ingestion",
+   "description": "PSI-25 has 129 unique tests",
+   "status": "pass",
+   "detail": "129 tests"
+  },
+  {
+   "id": "DATA-02",
+   "category": "ingestion",
+   "description": "Every Table 5.1 test exists in PSI-25",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "DATA-03",
+   "category": "traceability",
+   "description": "Table 5.1 initial and final O2 equal PSI-25 values",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "DATA-04",
+   "category": "traceability",
+   "description": "Table 7.1 O2 within 0.05 vol% of PSI-25 initial O2",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "DATA-05",
+   "category": "traceability",
+   "description": "Table 7.1 tests are SIBAL fabric in PSI-25",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "DATA-06",
+   "category": "traceability",
+   "description": "All Table 5.1 tests are opposed flow in Appendix A",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "DATA-07",
+   "category": "traceability",
+   "description": "All Table 7.1 tests are concurrent flow in Appendix A",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "DATA-08",
+   "category": "ingestion",
+   "description": "Flow configuration unresolved only for O1, O2, O20, O21, O22",
+   "status": "pass",
+   "detail": "O1, O2, O20, O21, O22"
+  },
+  {
+   "id": "UNIT-01",
+   "category": "units",
+   "description": "PMMA spread rates in (0, 1) mm/s",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "UNIT-02",
+   "category": "units",
+   "description": "Opposed flow velocities in (0, 60] cm/s",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "UNIT-03",
+   "category": "units",
+   "description": "O2 values within 10-25 vol%",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "UNIT-04",
+   "category": "units",
+   "description": "PMMA thickness in 1-5 mm, width 1.2 or 2.2 cm",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "UNIT-05",
+   "category": "units",
+   "description": "Final O2 never exceeds initial O2 in Table 5.1",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "UNIT-06",
+   "category": "units",
+   "description": "Quench final flow lies below start flow",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "REP-01",
+   "category": "repeated_measures",
+   "description": "Per-test aggregates recomputed from steps match the validation notebook",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "REP-02",
+   "category": "repeated_measures",
+   "description": "39 tracked steps from 18 independent tests",
+   "status": "pass",
+   "detail": "39 steps, 18 tests"
+  },
+  {
+   "id": "REP-03",
+   "category": "repeated_measures",
+   "description": "Steps are labelled repeated, tests independent",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "SCI-01",
+   "category": "reproduction",
+   "description": "F-B2-01 test-level rho reproduces from data",
+   "status": "pass",
+   "detail": "stated -0.718, computed -0.718"
+  },
+  {
+   "id": "SCI-02",
+   "category": "reproduction",
+   "description": "F-B2-02 spread fell at every step in all multi-step tests (13 of 13; flow down in 12)",
+   "status": "pass",
+   "detail": "13 of 13; flow down 12"
+  },
+  {
+   "id": "SCI-03",
+   "category": "reproduction",
+   "description": "F-B2-04 fabric outcome counts 6/1/6/14 reproduce",
+   "status": "pass",
+   "detail": "{'blow-off (high flow)': 1, 'burned, no extinction limit reached': 14, 'no ignition': 6, 'quenched (low flow)': 6}"
+  },
+  {
+   "id": "SCI-04",
+   "category": "reproduction",
+   "description": "F-B2-05 lowest fresh-sample sustained-flame O2 is 16.9 vol%; no ignition at 16.4, 16.4, 16.8",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "SCI-05",
+   "category": "reproduction",
+   "description": "F-B2-10 O2:CO2 slopes reproduce near PMMA stoichiometry (1.2)",
+   "status": "pass",
+   "detail": "rod 1.23, flat 1.201"
+  },
+  {
+   "id": "SCI-06",
+   "category": "reproduction",
+   "description": "F-OF15-01 Olson rod count reconciles: 27 tests minus 3 run in Feb 2016 equals 24",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "SCI-07",
+   "category": "reproduction",
+   "description": "F-B2-01 per-test median spread at 1 mm and 5 mm reproduces",
+   "status": "pass",
+   "detail": "{'1.0': 0.0895, '2.0': 0.0509, '3.0': 0.0338, '4.0': 0.0359, '5.0': 0.0296}"
+  },
+  {
+   "id": "EVD-01",
+   "category": "evidence_rules",
+   "description": "Every finding has a valid evidence type",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-02",
+   "category": "evidence_rules",
+   "description": "Verified measurements come only from verified BASS-II datasets",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-03",
+   "category": "evidence_rules",
+   "description": "No verified measurement rests on an abstract-only source",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-04",
+   "category": "traceability",
+   "description": "Every finding names a known study",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-05",
+   "category": "traceability",
+   "description": "Every source reference resolves and has a page, table, figure or slide locator",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-06",
+   "category": "traceability",
+   "description": "Every BASS-II test identifier in a finding exists in PSI-25",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-07",
+   "category": "evidence_rules",
+   "description": "Finding topics come from the controlled list",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-08",
+   "category": "units",
+   "description": "Every reported value carries a unit",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-09",
+   "category": "evidence_rules",
+   "description": "Every finding states at least one limitation",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-10",
+   "category": "evidence_rules",
+   "description": "Every study has a valid independence level",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "EVD-11",
+   "category": "evidence_rules",
+   "description": "The unsourced 0.88 mm/s Saffire-V value appears in no finding",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-01-A",
+   "category": "cross_study",
+   "description": "CMP-01 references only known findings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-01-B",
+   "category": "cross_study",
+   "description": "CMP-01 independent experiment count equals distinct lineages (3)",
+   "status": "pass",
+   "detail": "declared 3, lineages ['BASS', 'Saffire', 'SoFIE']"
+  },
+  {
+   "id": "CMP-01-C",
+   "category": "cross_study",
+   "description": "CMP-01 forbids numeric merging",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-02-A",
+   "category": "cross_study",
+   "description": "CMP-02 references only known findings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-02-B",
+   "category": "cross_study",
+   "description": "CMP-02 independent experiment count equals distinct lineages (3)",
+   "status": "pass",
+   "detail": "declared 3, lineages ['BASS', 'Saffire', 'SoFIE']"
+  },
+  {
+   "id": "CMP-02-C",
+   "category": "cross_study",
+   "description": "CMP-02 forbids numeric merging",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-03-A",
+   "category": "cross_study",
+   "description": "CMP-03 references only known findings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-03-B",
+   "category": "cross_study",
+   "description": "CMP-03 independent experiment count equals distinct lineages (2)",
+   "status": "pass",
+   "detail": "declared 2, lineages ['BASS', 'Saffire']"
+  },
+  {
+   "id": "CMP-03-C",
+   "category": "cross_study",
+   "description": "CMP-03 forbids numeric merging",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-04-A",
+   "category": "cross_study",
+   "description": "CMP-04 references only known findings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-04-B",
+   "category": "cross_study",
+   "description": "CMP-04 independent experiment count equals distinct lineages (2)",
+   "status": "pass",
+   "detail": "declared 2, lineages ['BASS', 'SoFIE']"
+  },
+  {
+   "id": "CMP-04-C",
+   "category": "cross_study",
+   "description": "CMP-04 forbids numeric merging",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-05-A",
+   "category": "cross_study",
+   "description": "CMP-05 references only known findings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "CMP-05-B",
+   "category": "cross_study",
+   "description": "CMP-05 independent experiment count equals distinct lineages (2)",
+   "status": "pass",
+   "detail": "declared 2, lineages ['BASS', 'Saffire']"
+  },
+  {
+   "id": "CMP-05-C",
+   "category": "cross_study",
+   "description": "CMP-05 forbids numeric merging",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "GAP-01",
+   "category": "traceability",
+   "description": "Data gaps reference known findings",
+   "status": "pass",
+   "detail": ""
+  }
+ ],
+ "passed": 51,
+ "failed": 0
+}
