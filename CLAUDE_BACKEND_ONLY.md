@@ -27,3 +27,7 @@
 - ⛔ Not allowed: new frontend components, aesthetic changes, imagery substitutions, typography changes, homepage redesign, invented chart values, modifying the verified dataset, or replacing this project with an old Claude starter.
 
 The site's visual design has already been handled by ChatGPT with the user. **Your job is to connect the infrastructure, not build the website.**
+
+## IMPORTANT: Research Experience v2.1 review candidate
+
+A new researcher-experience frontend candidate adds `site/research-upgrades.js`, `site/research-upgrades.css`, and updated `site/index.html`, `site/app.js`. The original approved hero art, source data, and backend API contract are unchanged. **Do not silently mix these new frontend files with your previous version.** Wait until Tiffany approves the v2.1 preview. If approved, deploy the entire supplied `site/` directory from this package as a cohesive replacement for the prior frontend; do not reproduce or revise the UI. GitHub/Cloudflare/backend/Gemini integration remain your only responsibilities.
