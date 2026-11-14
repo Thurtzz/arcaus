@@ -14,6 +14,7 @@
   <script src="./config.js"></script>
   <script src="./app.js" defer></script>
   <script src="./enhancements.js" defer></script>
+  <script src="./reference-interactions.js" defer></script>
 </head>
 <body>
   <div class="cosmic-noise" aria-hidden="true"></div>
@@ -31,6 +32,43 @@
     <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </header>
   <main id="top">
+
+    <!-- VISUAL LOCK: desktop (1280px+) is the exact approved 1671×941 artwork.
+         All controls over this reference are real keyboard-focusable DOM elements.
+         Below the fold, evidence and charts remain genuine DOM/SVG from the validated bundle.
+         On tablets/mobile the fully responsive semantic frontend is used instead. -->
+    <section class="reference-stage" id="reference-home" aria-label="ARCAUS — approved research observatory desktop experience">
+      <img class="reference-art" src="./assets/approved-desktop-reference.png" width="1671" height="941" alt="" draggable="false" fetchpriority="high"/>
+      <a class="ref-hit ref-brand" href="#top" aria-label="ARCAUS — home"></a>
+      <a class="ref-hit ref-nav-experiments" href="#experiments" aria-label="Experiments"></a>
+      <a class="ref-hit ref-nav-findings" href="#findings" aria-label="Findings"></a>
+      <a class="ref-hit ref-nav-data" href="#data" aria-label="Data"></a>
+      <a class="ref-hit ref-nav-resources" href="#resources" aria-label="Resources"></a>
+      <a class="ref-hit ref-nav-about" href="#method" aria-label="About ARCAUS"></a>
+      <a class="ref-hit ref-search" href="#experiments" aria-label="Search NASA research records"></a>
+      <button class="ref-hit ref-bell" type="button" data-ref-action="integrity" aria-label="Show research evidence status and limitations"></button>
+      <a class="ref-hit ref-mini-orb" href="#findings" aria-label="Explore the scientific evidence"></a>
+      <button class="ref-hit ref-flame" type="button" data-ref-action="artwork" aria-label="Learn about this illustrative flame artwork"></button>
+      <a class="ref-hit ref-hero-readouts" href="#data" aria-label="Explore the verified BASS-II experimental data"></a>
+      <a class="ref-hit ref-explore" href="#experiments" aria-label="Explore Experiments"></a>
+      <a class="ref-hit ref-findings" href="#findings" aria-label="View Findings"></a>
+      <button class="ref-hit ref-study-bass" type="button" data-ref-study="BASS-II" aria-label="Open BASS-II study and source-backed findings"></button>
+      <button class="ref-hit ref-study-saffire" type="button" data-ref-study="SAFFIRE-IV-V" aria-label="Open Saffire-V study and source-backed findings"></button>
+      <button class="ref-hit ref-study-sofie" type="button" data-ref-study="SOFIE-GEL" aria-label="Open SoFIE-GEL study and source-backed findings"></button>
+      <button class="ref-hit ref-comparison-vent" type="button" data-ref-comparison="CMP-05" aria-label="Explore cross-study ventilation and extinction evidence"></button>
+      <button class="ref-hit ref-comparison-geom" type="button" data-ref-comparison="CMP-03" aria-label="Explore cross-study geometry and spread evidence"></button>
+      <button class="ref-hit ref-comparison-oxygen" type="button" data-ref-comparison="CMP-02" aria-label="Explore oxygen and flame behavior evidence"></button>
+      <a class="ref-hit ref-metrics" href="#data" aria-label="Inspect the verified BASS-II test-run counts, outcomes, and correlation"></a>
+      <a class="ref-hit ref-graph" href="#data" aria-label="Explore the full interactive PMMA thickness versus spread chart and test records"></a>
+      <button class="ref-hit ref-point ref-point-1" type="button" data-ref-thickness="1" aria-label="PMMA at 1 mm: median test-mean spread rate 0.0895 mm per second"></button>
+      <button class="ref-hit ref-point ref-point-2" type="button" data-ref-thickness="2" aria-label="PMMA at 2 mm: median test-mean spread rate 0.0509 mm per second"></button>
+      <button class="ref-hit ref-point ref-point-3" type="button" data-ref-thickness="3" aria-label="PMMA at 3 mm: median test-mean spread rate 0.0338 mm per second"></button>
+      <button class="ref-hit ref-point ref-point-4" type="button" data-ref-thickness="4" aria-label="PMMA at 4 mm: median test-mean spread rate 0.0359 mm per second"></button>
+      <button class="ref-hit ref-point ref-point-5" type="button" data-ref-thickness="5" aria-label="PMMA at 5 mm: median test-mean spread rate 0.0296 mm per second"></button>
+      <div class="ref-status" aria-live="polite" aria-label="Validated research evidence status"><b id="refBundleMode">VERIFYING EVIDENCE…</b><span id="refBundleHash">SHA: READING…</span></div>
+    </section>
+    <dialog id="referenceDialog" class="reference-dialog" aria-labelledby="referenceDialogTitle"><form method="dialog"><button class="dialog-close" aria-label="Close dialog" type="submit">×</button></form><div class="overline">ARCAUS · SOURCE-BACKED RESEARCH</div><h2 id="referenceDialogTitle">Evidence details</h2><div id="referenceDialogContent"></div><a id="referenceDialogLink" class="ref-dialog-action" href="#data">Explore the evidence ↗</a></dialog>
+    <a class="return-top" href="#top" aria-label="Return to top of ARCAUS">↑ <span>Top</span></a>
     <section class="home-stage shell" aria-label="ARCAUS observatory home">
       <div class="hero-grid">
         <article class="hero-message exhibit-glass">

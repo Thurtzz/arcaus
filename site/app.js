@@ -16,8 +16,10 @@ async function initialize(){try{
   const [manifest,studies,findings,comparisons,gaps,summary,tests,fabric,sources,health]=await Promise.all(['/meta','/studies','/findings','/comparisons','/gaps','/bass2/summary','/bass2/pmma/tests','/bass2/fabric/outcomes','/sources','/health'].map(p=>remote(p)));
   view.data={manifest,studies,findings,comparisons,gaps,sources,bass2:{summary,pmma_tests:tests,fabric_outcomes:fabric},consistency:health};
   view.live=true;
-}catch(e){try{const r=await fetch('./data/evidence_bundle.json');if(!r.ok)throw Error('Static evidence bundle missing');view.data=await r.json();view.live=false;}catch(f){$('#scienceStatus').textContent='DATA UNAVAILABLE';$('#integrityStatus').textContent='Could not load research evidence. Run a local HTTP server from the frontend folder.';return;}}
+}catch(e){try{if(window.ARCAUS_INLINE_BUNDLE){view.data=window.ARCAUS_INLINE_BUNDLE;view.live=false;}else{const r=await fetch('./data/evidence_bundle.json');if(!r.ok)throw Error('Static evidence bundle missing');view.data=await r.json();view.live=false;}}catch(f){$('#scienceStatus').textContent='DATA UNAVAILABLE';$('#integrityStatus').textContent='Could not load research evidence. Run a local HTTP server from the frontend folder.';return;}}
+  window.ARCAUS_DATA_STATE=view;
   renderAll();
+  if (typeof window.ARCAUS_ReferenceUpdate==='function') window.ARCAUS_ReferenceUpdate();
 }
 function renderAll(){const b=view.data,s=b.bass2.summary;$('#scienceStatus').textContent=view.live?'VERIFIED API CONNECTED':'VERIFIED STATIC BUNDLE';
   $('#featuredStudies').innerHTML=['BASS-II','SAFFIRE-IV-V','SOFIE-GEL'].map(id=>{const x=b.studies.find(s=>s.id===id);if(!x)return '';return `<button type="button" class="featured-study" data-featured="${esc(id)}"><span class="featured-icon" aria-hidden="true"></span><span><strong>${esc(id==='SAFFIRE-IV-V'?'Saffire-V':id==='SOFIE-GEL'?'SoFIE-GEL':id)}</strong><small>${esc(id==='BASS-II'?'Burning and Suppression of Solids – II':id==='SOFIE-GEL'?'Solid Fuel Ignition and Extinction – Growth and Extinction Limit':'Spacecraft Fire Safety Experiment V')}</small></span><span class="arr">↗</span></button>`;}).join('');

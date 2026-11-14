@@ -34,3 +34,55 @@
 .mini-plot svg text{font-size:11.5px}
 @media(max-width:1060px){.flame-visual .orbit-one{width:100%;max-width:100%}}
 @media(max-width:720px){.flame-visual .orbit-one{width:100%}}
+
+
+/* ===========================================================
+   APPROVED-REFERENCE LOCK — first-screen visual EXACTNESS.
+   1671 × 941 composition is user-approved, not reinterpreted.
+   Intrinsic PNG scaling guarantees faithful presentation at >=1280px.
+   Interactive controls are independent HTML in real coordinates.
+   Mobile uses the existing fully native HTML/SVG experience.
+   =========================================================== */
+.reference-stage{display:none}
+.reference-dialog{max-width:min(560px,calc(100vw - 35px));background:linear-gradient(135deg,#290d24,#1b081a 65%,#35111e);border:1px solid #f48b57;color:#f1e6d4;border-radius:21px;box-shadow:0 20px 95px #000c,0 0 45px #a2474a66;padding:35px 36px 32px;font-family:var(--sans);line-height:1.6}
+.reference-dialog::backdrop{background:#09030bd9;backdrop-filter:blur(12px)}.reference-dialog h2{font-family:var(--sans);font-size:clamp(26px,3vw,38px);line-height:1.1;margin:11px 0 19px;letter-spacing:-.025em}.reference-dialog p{color:#dfccda;font-size:15px}.reference-dialog strong{color:#ffe9d5}.dialog-close{position:absolute;right:17px;top:14px;width:35px;height:35px;border:1px solid #f98a6255;border-radius:50%;background:#1b071a;color:#fff;font-size:25px;line-height:1}.ref-dialog-action{display:inline-flex;padding:11px 23px;background:linear-gradient(100deg,#9d3124,#f78d39);border:1px solid #ffa05f;border-radius:27px;margin-top:13px;color:#fff;font-weight:700}.reference-dialog a:not(.ref-dialog-action){color:#e8b67d;text-decoration:underline}.return-top{position:fixed;z-index:20;bottom:25px;right:28px;padding:10px 14px;background:#280e26e8;border:1px solid #e37b4a;border-radius:99px;color:#f1e6d4;box-shadow:0 8px 25px #000a;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .2s,transform .2s;font-size:12px;letter-spacing:.05em}.return-top.visible{opacity:1;pointer-events:auto;transform:none}
+@media(min-width:1280px){
+ .topbar,.home-stage{display:none!important}
+ .reference-stage{position:relative;display:block;z-index:1;width:100%;margin:0;line-height:0;overflow:hidden;aspect-ratio:1671/941;background:#130611}
+ .reference-art{display:block;width:100%;height:100%;object-fit:fill;user-select:none;-webkit-user-drag:none}
+ .ref-hit{position:absolute;display:block;border:0;background:transparent;color:transparent;padding:0;margin:0;border-radius:8px;cursor:pointer;touch-action:manipulation}
+ .ref-hit:hover{background:rgba(246,115,64,.075);outline:1px solid rgba(255,193,113,.55);outline-offset:-1px;box-shadow:0 0 17px #f777423b}
+ .ref-hit:focus-visible{background:rgba(246,115,64,.16);outline:3px solid #f8c582;outline-offset:2px}
+ .ref-brand{left:6.3%;top:1.6%;width:13.4%;height:5.6%}
+ .ref-nav-experiments{left:60.5%;top:2.7%;width:6.3%;height:3.6%}
+ .ref-nav-findings{left:67.1%;top:2.7%;width:4.8%;height:3.6%}
+ .ref-nav-data{left:72.8%;top:2.7%;width:3.0%;height:3.6%}
+ .ref-nav-resources{left:76.5%;top:2.7%;width:6.2%;height:3.6%}
+ .ref-nav-about{left:83.1%;top:2.7%;width:4.0%;height:3.6%}
+ .ref-search{left:87.9%;top:2.6%;width:2.5%;height:3.9%}
+ .ref-bell{left:90.4%;top:2.6%;width:2.6%;height:3.9%}
+ .ref-mini-orb{left:92.5%;top:2.3%;width:2.8%;height:4.2%;border-radius:100%}
+ .ref-flame{left:40.1%;top:14.6%;width:18.2%;height:31.0%;border-radius:50%}
+ .ref-hero-readouts{left:8.0%;top:31.8%;width:19.2%;height:6.8%}
+ .ref-explore{left:8.0%;top:39.0%;width:18.1%;height:4.0%;border-radius:45px}
+ .ref-findings{left:8.0%;top:43.6%;width:18.1%;height:4.0%;border-radius:45px}
+ .ref-study-bass{left:73.2%;top:15.1%;width:21.7%;height:9.6%;border-radius:18px}
+ .ref-study-saffire{left:73.2%;top:25.7%;width:21.7%;height:9.3%;border-radius:18px}
+ .ref-study-sofie{left:73.2%;top:35.4%;width:21.7%;height:10.3%;border-radius:18px}
+ .ref-comparison-vent{left:8.0%;top:59.8%;width:9.2%;height:13.0%}
+ .ref-comparison-geom{left:17.4%;top:59.8%;width:8.2%;height:13.0%}
+ .ref-comparison-oxygen{left:25.7%;top:59.8%;width:8.8%;height:13.0%}
+ .ref-metrics{left:38.0%;top:51.4%;width:22.9%;height:22.5%;border-radius:19px}
+ .ref-graph{left:64.3%;top:51.4%;width:28.0%;height:6.0%;border-radius:15px}
+ .ref-point{width:2.0%;height:3.6%;border-radius:50%;background:transparent}
+ .ref-point:hover,.ref-point:focus-visible{background:#ffac4477;box-shadow:0 0 15px #fe9539}
+ .ref-point-1{left:72.0%;top:56.5%}.ref-point-2{left:76.1%;top:60.6%}.ref-point-3{left:80.3%;top:63.5%}.ref-point-4{left:84.5%;top:63.0%}.ref-point-5{left:88.6%;top:63.9%}
+ .ref-status{position:absolute;left:58.8%;top:87.9%;width:13.5%;height:5.8%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-align:center;line-height:1.1;background:#2a0a1d;border:1.2px solid #df8b29;border-radius:99px;box-shadow:inset 0 0 12px #e7591c44,0 0 13px #b3462655;pointer-events:none;white-space:nowrap}
+ .ref-status b{font:700 clamp(7px,.82vw,14px) var(--sans);letter-spacing:.052em;color:#ffae00}
+ .ref-status span{font:500 clamp(7px,.69vw,11px) var(--mono);color:#f3e6dd}
+ .transition-rule{margin-top:8px}
+ body::before,body::after{z-index:-1}
+}
+@media(max-width:1279px){.return-top{right:12px;bottom:12px}.reference-dialog{padding:28px 22px}}
+
+@media(min-width:1280px){.ref-status:not(.state-notice){display:none}}
