@@ -4,7 +4,7 @@
 // unless every citation points at a retrieved record. The API key lives only in the Worker secret GEMINI_API_KEY.
 
 export const ASK_MAX_Q = 300;
-const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_MODEL = "gemini-3.5-flash";
 const MAX_FINDINGS = 6;
 const MAX_COMPARISONS = 2;
 
