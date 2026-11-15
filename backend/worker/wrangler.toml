@@ -7,4 +7,4 @@ compatibility_date = "2026-11-01"
 # No bindings are required: no KV, R2, D1 or AI.
 # Ask ARCAUS (/api/v1/ask) needs ONE encrypted secret, set in Cloudflare, never in this file:
 #   npx wrangler secret put GEMINI_API_KEY      (or Dashboard > arcaus-api > Settings > Variables and Secrets)
-# Optional plain variable: GEMINI_MODEL (default gemini-2.5-flash).
+# Optional plain variable: GEMINI_MODEL (default gemini-3.5-flash).

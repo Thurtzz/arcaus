@@ -4,7 +4,7 @@
 // unless every citation points at a retrieved record. The API key lives only in the Worker secret GEMINI_API_KEY.
 
 export const ASK_MAX_Q = 300;
-const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_MODEL = "gemini-3.5-flash";
 const MAX_FINDINGS = 6;
 const MAX_COMPARISONS = 2;
 
@@ -89,7 +89,7 @@ async function callGemini(env, q, pack, fetchImpl) {
   const payload = {
     systemInstruction: { parts: [{ text: SYSTEM }] },
     contents: [{ role: "user", parts: [{ text: `QUESTION: ${q}\n\nEVIDENCE (JSON):\n${JSON.stringify(pack)}` }] }],
-    generationConfig: { temperature: 0.1, maxOutputTokens: 900, responseMimeType: "application/json" },
+    generationConfig: { temperature: 0.1, maxOutputTokens: 8192, responseMimeType: "application/json" },
   };
   const res = await fetchImpl(url, {
     method: "POST",
@@ -103,10 +103,16 @@ async function callGemini(env, q, pack, fetchImpl) {
     const err = new Error(msg); err.upstreamStatus = res.status; throw err;
   }
   const out = JSON.parse(text);
-  const raw = out?.candidates?.[0]?.content?.parts?.map((p) => p.text || "").join("") || "";
-  let parsed;
-  try { parsed = JSON.parse(raw.replace(/^```(?:json)?\s*|\s*```$/g, "")); } catch { parsed = null; }
-  return { model, parsed, usage: out.usageMetadata || null };
+  const cand = out?.candidates?.[0];
+  // Newer Gemini models may return "thought" parts before the answer; only the non-thought text is the answer.
+  const raw = (cand?.content?.parts || []).filter((p) => !p.thought).map((p) => p.text || "").join("").trim();
+  let parsed = null;
+  const stripped = raw.replace(/^```(?:json)?\s*|\s*```$/g, "");
+  try { parsed = JSON.parse(stripped); } catch {
+    const a = stripped.indexOf("{"), b = stripped.lastIndexOf("}");
+    if (a >= 0 && b > a) { try { parsed = JSON.parse(stripped.slice(a, b + 1)); } catch { parsed = null; } }
+  }
+  return { model, parsed, finishReason: cand?.finishReason || null, usage: out.usageMetadata || null };
 }
 
 export async function handleAsk(service, bundle, env, searchParams, fetchImpl = fetch) {
@@ -140,7 +146,7 @@ export async function handleAsk(service, bundle, env, searchParams, fetchImpl = 
   }
   const p = g.parsed;
   if (!p || typeof p.answer !== "string") {
-    return err(502, "upstream_error", "The language model returned an unreadable answer.", { retrieved });
+    return err(502, "upstream_error", "The language model returned an unreadable answer.", { model: g.model, finish_reason: g.finishReason || null, retrieved });
   }
   const allowed = new Set(pack.map((r) => r.id));
   const inText = [...p.answer.matchAll(/\[([A-Z]+-[A-Z0-9-]+)\]/g)].map((m) => m[1]);

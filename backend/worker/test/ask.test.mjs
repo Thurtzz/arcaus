@@ -101,3 +101,38 @@ test("input validation matches the API contract style", async () => {
   assert.equal(await s({ q: "airflow", foo: "1" }), "unknown_parameter");
   assert.equal(await s([["q", "a"], ["q", "b"]]), "duplicate_parameter");
 });
+
+function rawStub(candidate) {
+  return async () => new Response(JSON.stringify({ candidates: [candidate], usageMetadata: { totalTokenCount: 1 } }), { status: 200 });
+}
+
+test("newer Gemini replies: thought parts are ignored and the answer part is used", async () => {
+  const reply = { supported: true, answer: "BASS-II flames went out when the fan stopped [CMP-05].", cited_ids: ["CMP-05"], unsupported_reason: "" };
+  const cand = { content: { parts: [{ text: "internal reasoning, not JSON {", thought: true }, { text: JSON.stringify(reply) }] }, finishReason: "STOP" };
+  const [status, body] = await handleAsk(service, bundle, { GEMINI_API_KEY: KEY }, params({ q: VENT_Q }), rawStub(cand));
+  assert.equal(status, 200);
+  assert.equal(body.meta.grounding, "verified_citations");
+  assert.ok(body.data.citations.some((c) => c.id === "CMP-05"));
+});
+
+test("JSON wrapped in prose is still recovered; truncated output is reported with finish_reason", async () => {
+  const reply = { supported: true, answer: "See [CMP-05].", cited_ids: ["CMP-05"], unsupported_reason: "" };
+  const wrapped = { content: { parts: [{ text: "Here is the JSON:\n" + JSON.stringify(reply) + "\nDone." }] }, finishReason: "STOP" };
+  const [ok] = await handleAsk(service, bundle, { GEMINI_API_KEY: KEY }, params({ q: VENT_Q }), rawStub(wrapped));
+  assert.equal(ok, 200);
+  const cut = { content: { parts: [{ text: '{"supported": true, "answer": "BASS-II fla' }] }, finishReason: "MAX_TOKENS" };
+  const [status, body] = await handleAsk(service, bundle, { GEMINI_API_KEY: KEY }, params({ q: VENT_Q }), rawStub(cut));
+  assert.equal(status, 502);
+  assert.equal(body.error.code, "upstream_error");
+  assert.equal(body.error.details.finish_reason, "MAX_TOKENS");
+  assert.ok(!JSON.stringify(body).includes(KEY));
+});
+
+test("request asks for enough output room for thinking models", async () => {
+  const cap = [];
+  const reply = { supported: true, answer: "[CMP-05]", cited_ids: ["CMP-05"], unsupported_reason: "" };
+  await handleAsk(service, bundle, { GEMINI_API_KEY: KEY }, params({ q: VENT_Q }), geminiStub(reply, cap));
+  const cfg = JSON.parse(cap[0].init.body).generationConfig;
+  assert.ok(cfg.maxOutputTokens >= 4096);
+  assert.match(cap[0].url, /gemini-3\.5-flash:generateContent$/);
+});

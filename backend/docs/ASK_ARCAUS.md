@@ -5,7 +5,7 @@
 ## How it answers
 1. **Retrieval.** BM25 retrieval runs through the existing `/api/v1/search` (up to 2 comparisons plus their findings and the top findings).
 2. **Nothing matches.** The endpoint answers "unsupported" and Gemini is **not called**.
-3. **Gemini call.** Gemini (default `gemini-2.5-flash`, override with `GEMINI_MODEL`) receives only that evidence pack plus strict rules:
+3. **Gemini call.** Gemini (default `gemini-3.5-flash`, override with `GEMINI_MODEL`) receives only that evidence pack plus strict rules:
    - cite record ids;
    - keep evidence classes;
    - state the conditions;
