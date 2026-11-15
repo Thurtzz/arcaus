@@ -14,6 +14,9 @@
   <script src="./config.js"></script>
   <script src="./app.js" defer></script>
   <script src="./enhancements.js" defer></script>
+  <script src="./reference-interactions.js" defer></script>
+  <script src="./research-upgrades.js" defer></script>
+  <link rel="stylesheet" href="./research-upgrades.css"/>
 </head>
 <body>
   <div class="cosmic-noise" aria-hidden="true"></div>
@@ -31,6 +34,43 @@
     <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </header>
   <main id="top">
+
+    <!-- VISUAL LOCK: desktop (1280px+) is the exact approved 1671×941 artwork.
+         All controls over this reference are real keyboard-focusable DOM elements.
+         Below the fold, evidence and charts remain genuine DOM/SVG from the validated bundle.
+         On tablets/mobile the fully responsive semantic frontend is used instead. -->
+    <section class="reference-stage" id="reference-home" aria-label="ARCAUS — approved research observatory desktop experience">
+      <img class="reference-art" src="./assets/approved-desktop-reference.png" width="1671" height="941" alt="" draggable="false" fetchpriority="high"/>
+      <a class="ref-hit ref-brand" href="#top" aria-label="ARCAUS — home"></a>
+      <a class="ref-hit ref-nav-experiments" href="#experiments" aria-label="Experiments"></a>
+      <a class="ref-hit ref-nav-findings" href="#findings" aria-label="Findings"></a>
+      <a class="ref-hit ref-nav-data" href="#data" aria-label="Data"></a>
+      <a class="ref-hit ref-nav-resources" href="#resources" aria-label="Resources"></a>
+      <a class="ref-hit ref-nav-about" href="#method" aria-label="About ARCAUS"></a>
+      <a class="ref-hit ref-search" href="#experiments" aria-label="Search NASA research records"></a>
+      <button class="ref-hit ref-bell" type="button" data-ref-action="integrity" aria-label="Show research evidence status and limitations"></button>
+      <a class="ref-hit ref-mini-orb" href="#findings" aria-label="Explore the scientific evidence"></a>
+      <button class="ref-hit ref-flame" type="button" data-ref-action="artwork" aria-label="Learn about this illustrative flame artwork"></button>
+      <a class="ref-hit ref-hero-readouts" href="#data" aria-label="Explore the verified BASS-II experimental data"></a>
+      <a class="ref-hit ref-explore" href="#experiments" aria-label="Explore Experiments"></a>
+      <a class="ref-hit ref-findings" href="#findings" aria-label="View Findings"></a>
+      <button class="ref-hit ref-study-bass" type="button" data-ref-study="BASS-II" aria-label="Open BASS-II study and source-backed findings"></button>
+      <button class="ref-hit ref-study-saffire" type="button" data-ref-study="SAFFIRE-IV-V" aria-label="Open Saffire-V study and source-backed findings"></button>
+      <button class="ref-hit ref-study-sofie" type="button" data-ref-study="SOFIE-GEL" aria-label="Open SoFIE-GEL study and source-backed findings"></button>
+      <button class="ref-hit ref-comparison-vent" type="button" data-ref-comparison="CMP-05" aria-label="Explore cross-study ventilation and extinction evidence"></button>
+      <button class="ref-hit ref-comparison-geom" type="button" data-ref-comparison="CMP-03" aria-label="Explore cross-study geometry and spread evidence"></button>
+      <button class="ref-hit ref-comparison-oxygen" type="button" data-ref-comparison="CMP-02" aria-label="Explore oxygen and flame behavior evidence"></button>
+      <a class="ref-hit ref-metrics" href="#data" aria-label="Inspect the verified BASS-II test-run counts, outcomes, and correlation"></a>
+      <a class="ref-hit ref-graph" href="#data" aria-label="Explore the full interactive PMMA thickness versus spread chart and test records"></a>
+      <button class="ref-hit ref-point ref-point-1" type="button" data-ref-thickness="1" aria-label="PMMA at 1 mm: median test-mean spread rate 0.0895 mm per second"></button>
+      <button class="ref-hit ref-point ref-point-2" type="button" data-ref-thickness="2" aria-label="PMMA at 2 mm: median test-mean spread rate 0.0509 mm per second"></button>
+      <button class="ref-hit ref-point ref-point-3" type="button" data-ref-thickness="3" aria-label="PMMA at 3 mm: median test-mean spread rate 0.0338 mm per second"></button>
+      <button class="ref-hit ref-point ref-point-4" type="button" data-ref-thickness="4" aria-label="PMMA at 4 mm: median test-mean spread rate 0.0359 mm per second"></button>
+      <button class="ref-hit ref-point ref-point-5" type="button" data-ref-thickness="5" aria-label="PMMA at 5 mm: median test-mean spread rate 0.0296 mm per second"></button>
+      <div class="ref-status" aria-live="polite" aria-label="Validated research evidence status"><b id="refBundleMode">VERIFYING EVIDENCE…</b><span id="refBundleHash">SHA: READING…</span></div>
+    </section>
+    <dialog id="referenceDialog" class="reference-dialog" aria-labelledby="referenceDialogTitle"><form method="dialog"><button class="dialog-close" aria-label="Close dialog" type="submit">×</button></form><div class="overline">ARCAUS · SOURCE-BACKED RESEARCH</div><h2 id="referenceDialogTitle">Evidence details</h2><div id="referenceDialogContent"></div><a id="referenceDialogLink" class="ref-dialog-action" href="#data">Explore the evidence ↗</a></dialog>
+    <a class="return-top" href="#top" aria-label="Return to top of ARCAUS">↑ <span>Top</span></a>
     <section class="home-stage shell" aria-label="ARCAUS observatory home">
       <div class="hero-grid">
         <article class="hero-message exhibit-glass">
@@ -82,7 +122,8 @@
 
     <section class="research-section shell" id="findings">
       <div class="section-intro"><div class="section-kicker"><span>01</span> / CROSS-STUDY INTELLIGENCE</div><h2>What survives <em>comparison?</em></h2><p>Five evidence-led questions across NASA investigations. We show where observations align—and where the experiment, conditions, and conclusions diverge.</p></div>
-      <div class="research-layout">
+      <div class="research-toolbar"><div class="research-toolbar-label"><span class="pulse-dot"></span> EVIDENCE COMPARISON STUDIO <small>Visualize relationships; preserve differences</small></div><div class="research-toolbar-key"><span><i class="key-dot measured"></i> Measurements</span><span><i class="key-dot conclusion"></i> Published conclusions</span><span><i class="key-dot hypothesis"></i> Hypotheses</span></div></div>
+      <div class="research-layout comparison-workbench">
         <aside class="panel selection-panel"><h3 class="rail-label">RESEARCH QUESTIONS <span class="index-count">05</span></h3><div id="comparisonList" class="comparison-list"></div><div class="source-hint">Each comparison preserves experimental independence and published limitations.</div></aside>
         <article id="comparisonDetail" class="panel comparison-detail" aria-live="polite"><p>Select a research question to inspect NASA-sourced evidence.</p></article>
       </div>
@@ -90,16 +131,21 @@
 
     <section class="research-section shell" id="data">
       <div class="section-intro"><div class="section-kicker"><span>02</span> / MEASURED DATA</div><h2>Inside the <em>experiment.</em></h2><p>Real BASS-II records, not decorative simulation. Explore how measured PMMA spread varied across material thickness and how fabric test outcomes were classified.</p></div>
+      <div class="lab-stripe"><span class="lab-symbol">⌁</span><div><strong>THE MATERIALS LAB</strong><small>Inspect authentic measurements and test conditions. Change views without changing the science.</small></div><span class="lab-index">NASA / BASS-II / 2014</span></div>
       <div class="chart-grid">
-        <article class="panel chart-panel"><div class="chart-title"><div><div class="overline">BASS-II · TABLE 5.1</div><h3>PMMA thickness & flame spread</h3><p>18 independent test-run means · mm/s</p></div><span class="tag">VERIFIED MEASUREMENTS</span></div><div id="testChart" class="plot"></div><div id="testDetail" class="data-notice">Select a glowing data point to inspect its test conditions.</div></article>
+        <article class="panel chart-panel"><div class="chart-title"><div><div class="overline">BASS-II · TABLE 5.1</div><h3>PMMA thickness & flame spread</h3><p>18 independent test-run means · mm/s</p></div><span class="tag">VERIFIED MEASUREMENTS</span></div><div id="pmmaControls" class="pmma-controls"></div><div id="testChart" class="plot"></div><div id="testDetail" class="data-notice">Select a glowing data point to inspect its test conditions.</div></article>
         <article class="panel chart-panel"><div class="chart-title"><div><div class="overline">BASS-II · TABLE 7.1</div><h3>Fabric ignition & extinction</h3><p>27 test records · outcome categories</p></div><span class="tag">OBSERVED OUTCOMES</span></div><div id="fabricSummary" class="fabric-bars"></div><p class="caveat">Eight test records involved previously burned specimens. Classifications must be read in the context of the NASA test notes.</p></article>
+      </div>
+      <div class="analysis-grid">
+        <article class="panel analysis-panel"><div class="overline">REPEATED MEASUREMENTS / WITHIN ONE TEST</div><h3>How flame spread changed during a test.</h3><p>Choose a PMMA test to trace its tracked flow steps. The points show observations in sequence—not a controlled response curve.</p><div id="flowSelector"></div><div id="flowProfile" class="detail-plot"></div><div id="flowReadout" class="data-notice" aria-live="polite"></div></article>
+        <article class="panel analysis-panel"><div class="overline">27 FABRIC RECORDS / TABLE 7.1</div><h3>A closer look at fabric outcomes.</h3><p>Each tile represents one test record. Select an outcome or an individual test to inspect conditions, reuse and NASA's notes.</p><div id="fabricFilter"></div><div id="fabricMatrix" class="fabric-matrix"></div><div id="fabricReadout" class="data-notice" aria-live="polite"></div></article>
       </div>
       <div class="section-footnote">The plotted measurements are descriptive observations under selected experimental conditions, not predictive safety thresholds or a universal model.</div>
     </section>
 
     <section class="research-section shell" id="experiments">
       <div class="section-intro"><div class="section-kicker"><span>03</span> / INVESTIGATION ARCHIVE</div><h2>Explore the <em>experiments.</em></h2><p>Trace each discovery back to an investigation, its materials and test conditions, and the original NASA research record.</p></div>
-      <div class="explorer-grid">
+      <div class="experiment-atlas-head"><span>SCIENTIFIC VISUAL ATLAS</span><span>Conceptual diagrams, not NASA photographs or simulations</span></div><div id="experimentGallery" class="experiment-gallery" aria-label="Visual investigation gallery"></div><div class="explorer-grid">
         <aside class="panel selection-panel"><label class="rail-label" for="researchSearch">SEARCH VERIFIED EVIDENCE</label><div class="search-control"><input id="researchSearch" placeholder="Try ‘quenching’ or ‘ventilation’" maxlength="200" autocomplete="off"/><button id="researchSearchButton" aria-label="Search scientific evidence" type="button">⌕</button></div><div id="searchStatus" class="source-hint" role="status">Search source-backed records</div><div id="searchResults" class="search-results" aria-live="polite"></div><h3 class="rail-label index-label">NASA INVESTIGATIONS</h3><div id="studyList" class="study-list"></div></aside>
         <article id="studyDetail" class="panel study-detail" aria-live="polite"><p>Select an investigation to read its findings.</p></article>
       </div>
@@ -111,7 +157,7 @@
     </section>
 
     <section class="research-section shell" id="method">
-      <div class="section-intro"><div class="section-kicker"><span>05</span> / TRANSPARENCY</div><h2>Evidence first.<br/><em>Claims in context.</em></h2><p>ARCAUS is an independent research observatory, not a certified spacecraft-fire safety model. Where the source record leaves uncertainty, we keep it visible.</p></div><div class="method-grid"><article class="panel method-panel"><div class="overline">THE RESEARCH METHOD</div><h3>How we interpret the evidence</h3><ol><li>Inspect NASA experiments and publication records.</li><li>Preserve test-level measurements and their conditions.</li><li>Separate independent tests from repeated steps and publications.</li><li>Compare conclusions without pooling incompatible numerical data.</li></ol></article><article class="panel method-panel"><div class="overline">KNOWN LIMITATIONS</div><h3>Open evidence gaps</h3><div id="gapList"></div></article></div><p id="integrityStatus" class="integrity">Reading source-bundle integrity status…</p>
+      <div class="section-intro"><div class="section-kicker"><span>05</span> / TRANSPARENCY</div><h2>Evidence first.<br/><em>Claims in context.</em></h2><p>ARCAUS is an independent research observatory, not a certified spacecraft-fire safety model. Where the source record leaves uncertainty, we keep it visible.</p></div><div id="researchNarrative" class="research-narrative"></div><div class="method-grid"><article class="panel method-panel"><div class="overline">THE RESEARCH METHOD</div><h3>How we interpret the evidence</h3><ol><li>Inspect NASA experiments and publication records.</li><li>Preserve test-level measurements and their conditions.</li><li>Separate independent tests from repeated steps and publications.</li><li>Compare conclusions without pooling incompatible numerical data.</li></ol></article><article class="panel method-panel"><div class="overline">KNOWN LIMITATIONS</div><h3>Open evidence gaps</h3><div id="gapList"></div></article></div><p id="integrityStatus" class="integrity">Reading source-bundle integrity status…</p>
       <div class="openspace-strip panel"><div><div class="overline">OPTIONAL EXTERNAL EXPERIENCE</div><h3>Journey through the universe with <em>OpenSpace.</em></h3><p>OpenSpace is a separate open-source visualization platform. ARCAUS does not embed it or use it to simulate the NASA flame studies.</p></div><a href="https://www.openspaceproject.com/" target="_blank" rel="noopener noreferrer" class="outline-action">Explore OpenSpace ↗</a></div>
     </section>
   </main>

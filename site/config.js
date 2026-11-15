@@ -2,4 +2,4 @@
  * Example: window.ARCAUS_API_BASE = 'https://your-evidence-worker.workers.dev/api/v1';
  * Empty: secure production sites use the bundled verified evidence JSON; localhost uses local API.
  */
-window.ARCAUS_API_BASE = '';
+window.ARCAUS_API_BASE = 'https://arcaus-api.th3701.workers.dev/api/v1';
