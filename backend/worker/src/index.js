@@ -10,6 +10,7 @@ const CORS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Expose-Headers": "X-Ask-RateLimit",
   "Access-Control-Max-Age": "86400",
 };
 
@@ -46,17 +47,22 @@ export async function respondAsk(request, env, fetchImpl) {
   }
   // Cost protection: per-visitor limit on Gemini-backed questions (Workers Rate Limiting binding ASK_LIMITER).
   // Fails open if the binding is absent (local tests) or the limiter errors, so the evidence API is never blocked.
+  let rl = "absent";
   if (env && env.ASK_LIMITER && typeof env.ASK_LIMITER.limit === "function") {
     let allowed = true;
     try {
       const key = request.headers.get("CF-Connecting-IP") || "unknown";
-      ({ success: allowed } = await env.ASK_LIMITER.limit({ key: `ask:${key}` }));
-    } catch { allowed = true; }
+      const out = await env.ASK_LIMITER.limit({ key: `ask:${key}` });
+      allowed = !(out && out.success === false);
+      rl = allowed ? "ok" : "blocked";
+    } catch (e) { allowed = true; rl = "error:" + String(e && e.message || e).slice(0, 80).replace(/[^\x20-\x7e]/g, ""); }
+    headers["X-Ask-RateLimit"] = rl;
     if (!allowed) {
       return new Response(JSON.stringify({ error: { code: "rate_limited", message: "Too many questions in a short time. Please wait a minute and try again. The evidence explorer still works.", details: { limit: "10 per minute per visitor" } } }),
         { status: 429, headers: { ...headers, "Retry-After": "60" } });
     }
   }
+  headers["X-Ask-RateLimit"] = rl;
   const [status, body] = await handleAsk(service, bundle, env, url.searchParams, fetchImpl);
   return new Response(request.method === "HEAD" ? null : JSON.stringify(body), { status, headers });
 }
