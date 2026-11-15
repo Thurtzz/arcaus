@@ -44,6 +44,19 @@ export async function respondAsk(request, env, fetchImpl) {
   if (request.method !== "GET" && request.method !== "HEAD") {
     return new Response(JSON.stringify({ error: { code: "method_not_allowed", message: "Use GET", details: { allowed: ["GET", "HEAD", "OPTIONS"] } } }), { status: 405, headers });
   }
+  // Cost protection: per-visitor limit on Gemini-backed questions (Workers Rate Limiting binding ASK_LIMITER).
+  // Fails open if the binding is absent (local tests) or the limiter errors, so the evidence API is never blocked.
+  if (env && env.ASK_LIMITER && typeof env.ASK_LIMITER.limit === "function") {
+    let allowed = true;
+    try {
+      const key = request.headers.get("CF-Connecting-IP") || "unknown";
+      ({ success: allowed } = await env.ASK_LIMITER.limit({ key: `ask:${key}` }));
+    } catch { allowed = true; }
+    if (!allowed) {
+      return new Response(JSON.stringify({ error: { code: "rate_limited", message: "Too many questions in a short time. Please wait a minute and try again. The evidence explorer still works.", details: { limit: "10 per minute per visitor" } } }),
+        { status: 429, headers: { ...headers, "Retry-After": "60" } });
+    }
+  }
   const [status, body] = await handleAsk(service, bundle, env, url.searchParams, fetchImpl);
   return new Response(request.method === "HEAD" ? null : JSON.stringify(body), { status, headers });
 }

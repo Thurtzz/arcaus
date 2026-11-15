@@ -136,3 +136,4 @@ test("request asks for enough output room for thinking models", async () => {
   assert.ok(cfg.maxOutputTokens >= 4096);
   assert.match(cap[0].url, /gemini-3\.5-flash:generateContent$/);
 });
+
