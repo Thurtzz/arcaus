@@ -53,4 +53,9 @@ async function doSearch(){const q=$('#researchSearch').value.trim();if(!q){$('#s
 $('#searchStatus').textContent=`${method} · ${total} matches`;
 $('#searchResults').innerHTML=results.map(r=>`<button type="button" class="pick" data-result="${esc(r.id)}" data-result-type="${esc(r.type)}">${esc(r.title)}<small>${esc(r.type)} ${r.matched_terms?' · matches: '+esc(r.matched_terms.join(', ')):''}</small></button>`).join('')||'<span>No source-backed matches found.</span>';
 $('#searchResults').querySelectorAll('[data-result]').forEach(btn=>btn.addEventListener('click',()=>{if(btn.dataset.resultType==='comparison'){view.comparison=btn.dataset.result;renderComparisons();$('#findings').scrollIntoView({behavior:'smooth'});}else if(btn.dataset.resultType==='finding'){const f=view.data.findings.find(x=>x.id===btn.dataset.result);if(f){const c=view.data.comparisons.find(x=>x.finding_ids.includes(f.id));if(c){view.comparison=c.id;renderComparisons();$('#findings').scrollIntoView({behavior:'smooth'});}else{view.study=f.study_id;renderStudyList();renderStudyDetail();}}}else if(btn.dataset.resultType==='study'){view.study=btn.dataset.result;renderStudyList();renderStudyDetail();}}));}
-initialize();
+// Wait for all deferred enhancement modules before rendering interactive components.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initialize, {once:true});
+} else {
+  queueMicrotask(initialize);
+}
